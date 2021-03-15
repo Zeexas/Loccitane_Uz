@@ -17,13 +17,14 @@ function scrollFunction() {
 }
 
 //  DropDown submenu
-let slideDowmTime = 500;
+let slideDowmTime = 200;
+let slideUpTime = 400;
 
 jQuery('.dropdown-gifts').hover(function () {
         $('.dropdown-gifts-content').stop().slideDown(slideDowmTime);
         $('.dropdown-gifts-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-gifts-content').slideUp(slideDowmTime);
+        $('.dropdown-gifts-content').delay("200").slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-gifts-content').css('border-bottom', 'none');    
 });
@@ -32,7 +33,7 @@ jQuery('.dropdown-sale').hover(function () {
         $('.dropdown-sale-content').stop().slideDown(slideDowmTime);
         $('.dropdown-sale-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-sale-content').slideUp(slideDowmTime);
+        $('.dropdown-sale-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-sale-content').css('border-bottom', 'none');
 });
@@ -41,7 +42,7 @@ jQuery('.dropdown-makeup').hover(function () {
         $('.dropdown-makeup-content').stop().slideDown(slideDowmTime);
         $('.dropdown-makeup-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-makeup-content').slideUp(slideDowmTime);
+        $('.dropdown-makeup-content').delay("200").slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-makeup-content').css('border-bottom', 'none');
 });
@@ -50,7 +51,7 @@ jQuery('.dropdown-face').hover(function () {
         $('.dropdown-face-content').stop().slideDown(slideDowmTime);
         $('.dropdown-face-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-face-content').slideUp(slideDowmTime);
+        $('.dropdown-face-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-face-content').css('border-bottom', 'none');
 });
@@ -59,7 +60,7 @@ jQuery('.dropdown-body').hover(function () {
         $('.dropdown-body-content').stop().slideDown(slideDowmTime);
         $('.dropdown-body-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-body-content').slideUp(slideDowmTime);
+        $('.dropdown-body-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-body-content').css('border-bottom', 'none');
 });
@@ -68,7 +69,7 @@ jQuery('.dropdown-aroma').hover(function () {
         $('.dropdown-aroma-content').stop().slideDown(slideDowmTime);
         $('.dropdown-aroma-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-aroma-content').slideUp(slideDowmTime);
+        $('.dropdown-aroma-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-aroma-content').css('border-bottom', 'none');
 });
@@ -77,7 +78,7 @@ jQuery('.dropdown-men').hover(function () {
         $('.dropdown-men-content').stop().slideDown(slideDowmTime);
         $('.dropdown-men-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-men-content').slideUp(slideDowmTime);
+        $('.dropdown-men-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-men-content').css('border-bottom', 'none');
 });
@@ -86,7 +87,7 @@ jQuery('.dropdown-soap').hover(function () {
         $('.dropdown-soap-content').stop().slideDown(slideDowmTime);
         $('.dropdown-soap-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-soap-content').slideUp(slideDowmTime);
+        $('.dropdown-soap-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-soap-content').css('border-bottom', 'none');
 });
@@ -95,7 +96,7 @@ jQuery('.dropdown-baby').hover(function () {
         $('.dropdown-baby-content').stop().slideDown(slideDowmTime);
         $('.dropdown-baby-content').css('border-bottom', '0.1rem solid #ccc');
     }, function() {
-        $('.dropdown-baby-content').slideUp(slideDowmTime);
+        $('.dropdown-baby-content').slideUp(slideUpTime);
         $('.m-nav').css('height', '');
         $('.dropdown-baby-content').css('border-bottom', 'none');
 });

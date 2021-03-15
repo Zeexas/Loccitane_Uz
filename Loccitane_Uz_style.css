@@ -127,20 +127,17 @@ a {
     width: 20rem;
     padding: 1rem;
     text-align: left;
-    background: ;
 }
 
 .header-shops {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    background: ;
 }
 
 .header-shops-text {
     padding: 0 .5rem;
     transition: 0.4s;
-    background: ;
 }
 
 .header-shops-text:hover {
@@ -172,7 +169,6 @@ a {
     text-align: center;
     padding: .5rem 0;
     overflow: visible;
-    background: ;
 }
 
 .m-dropdown {
@@ -185,7 +181,6 @@ a {
     margin: 0;
     padding: 0.2rem 1rem;
     overflow: hidden;
-    background: ;
 }
 
 .m-dropdown_item li {
@@ -195,7 +190,6 @@ a {
 
 .m-dropdown_item ul {
     text-align: left;
-    background: ;
     margin: 0 auto;
     width: 60%;
 }
@@ -247,12 +241,10 @@ a {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    background: ;
 }
 
 .gifts-page,
 .sale-page {
-    width: ;
     text-align: center;
 }
 
@@ -285,7 +277,6 @@ a {
     display: block;
     width: 20rem;
     margin: 1rem;
-    background: ;
 }
 
 .gifts-page .dropdown-content-title,
@@ -300,14 +291,11 @@ a {
     border-bottom: .1rem solid #ccc;
     width: 80%;
     margin: .5rem auto;
-    background: ;
 }
 
 .dropdown-content-list a:hover {
     text-decoration: underline;
 }
-
-
 
 
 
@@ -391,8 +379,7 @@ a {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background: lightgreen;
+    position: relative;;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -572,7 +559,6 @@ a {
     width: 100%;
     margin-top: 8rem;
     font-family: var(--font-add);
-    background: ;
 }
 
 .last-module-news {
@@ -663,7 +649,6 @@ a {
     font-weight: 600;
     margin: 5rem auto;
     padding: 0 0 3rem;
-    background: ;
 }
 
 .logo-footer {
@@ -688,7 +673,6 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background: ;
 }
 
 .item-page-block-0 > * {
@@ -697,7 +681,6 @@ a {
 
 .item-page-text {
     max-width: 30rem;
-    background: ;
 }
 
 .item-page .item-title {
@@ -728,8 +711,6 @@ a {
     justify-content: center;
     max-width: 75%;
     margin: 0 auto;
-    height: ;
-    
 }
 
 .about-img {
@@ -758,7 +739,6 @@ a {
     font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
-    background: ;
     padding: 1rem;
     border-top: 0.1rem solid #ccc;
     cursor: pointer;
@@ -787,7 +767,6 @@ a {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    display: ;
 }
 
 .about-text-1 {
@@ -798,10 +777,6 @@ a {
 .about-text-2 {
     display: none;
 
-}
-
-.about-text > div {
-    background: ;
 }
 
 .about-text-title {
@@ -819,9 +794,7 @@ a {
 /*                          Menu page block                         */
 
 .menu-page-main {
-    height: ;
     position: relative;
-    background: ;
 }
 
 .menu-page-poster {
@@ -902,7 +875,6 @@ a {
     font-size: 2rem;
     margin: 7rem auto 1rem;
     text-align: center;
-    background: ;
 }
 
 .ribbon-small {
@@ -915,7 +887,6 @@ a {
 .module-content-block {
     width: 18rem;
     margin: 0 1rem 5rem;
-    background: ;
 }
 
 .module-content-block-makeup {
@@ -932,16 +903,6 @@ a {
     font-size: 0.9rem;
     margin: 0 1rem;
 }
-
-/*.module-content-block {
-    width: 20rem;
-    margin: 2rem 0;
-    
-}
-
-*/
-
-
 
 
 
