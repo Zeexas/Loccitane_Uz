@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Бальзам после бритья<br>L'Occitan</div>
-                    <div class="item-desc">Обогащенный маслом карите и экстрактом березы бальзам помогает увлажнить и смягчить раздраженную после бритья кожу.<br>
-                        Формула разработана специально для ...</div>
+                    <div class="item-title">{{products.men["Бальзам после бритья L'Occitan"].name}}</div>
+                    <div class="item-desc">{{products.men["Бальзам после бритья L'Occitan"].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Бальзам после бритья Локситан.webp">
+                <img :src="products.men[`Бальзам после бритья L'Occitan`].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,14 +47,11 @@
                     <img src="../../img/CO_Co_Occitan.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Обогащенный глицерином растительного происхождения и экстрактом березы бальзам увлажняет и помогает смягчить раздраженную после бритья кожу.
-                            Формула разработана специально для снятия ощущений раздражения и стянутости, вызванных бритьем.
-                            Бальзам успокаивает и тонизирует кожу. Благодаря легкой текстуре средство быстро впитывается, не оставляя ощущения жирности.
-                            Волна свежести дарит заряд бодрости и наполняет свежим дыханием морского бриза.</div>
+                        <div class="about-text-text">{{products.men["Бальзам после бритья L'Occitan"].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на лицо и шею после бритья.</div>
+                        <div class="about-text-text">{{products.men["Бальзам после бритья L'Occitan"].advice}}</div>
                     </div>
                 </div>
             </div>

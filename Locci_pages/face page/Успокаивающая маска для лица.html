@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Успокаивающая маска для лица</div>
-                    <div class="item-desc">Маска обладает текстурой домашнего йогурта с настоящими семенами черной смородины. Она мгновенно преображает и успокаивает кожу, делая ее свежей и ...</div>
+                    <div class="item-title">{{products.face['Успокаивающая маска для лица'].name}}</div>
+                    <div class="item-desc">{{products.face['Успокаивающая маска для лица'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Успокаивающая маска для лица.webp">
+                <img :src="products.face['Успокаивающая маска для лица'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Infusion.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Маска обладает текстурой домашнего йогурта с настоящими семенами черной смородины. 
-                            Она мгновенно преображает и успокаивает кожу, делая ее свежей и отдохнувшей. 
-                            Использование маски подарит Вам невероятные ощущения блаженства и комфорта.</div>
+                        <div class="about-text-text">{{products.face['Успокаивающая маска для лица'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на чистую кожу лица, оставить на 5 минут. После смыть водой. Использовать 1-2 раза в неделю.</div>
+                        <div class="about-text-text">{{products.face['Успокаивающая маска для лица'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Ультраувлажняющий крем для лица Аква Реотье</div>
-                    <div class="item-desc">Легкий невесомый крем обогащен минерализованной водой из источника Реотье. Он мгновенно увлажняет кожу и запирает капельки воды изнутри, сохраняя её ...</div>
+                    <div class="item-title">{{products.face['Ультраувлажняющий крем для лица Аква Реотье'].name}}</div>
+                    <div class="item-desc">{{products.face['Ультраувлажняющий крем для лица Аква Реотье'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Ультраувлажняющий крем для лица Аква Реотье.webp">
+                <img :src="products.face['Ультраувлажняющий крем для лица Аква Реотье'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Reotier.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Легкий невесомый крем обогащен минерализованной водой из источника Реотье. Он мгновенно увлажняет кожу и запирает капельки воды изнутри, сохраняя её влагу на протяжении всего дня. 
-                            Ваша кожа выглядит свежей и сияющей.</div>
+                        <div class="about-text-text">{{products.face['Ультраувлажняющий крем для лица Аква Реотье'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносите утром и вечером на кожу лица, избегая область вокруг глаз.</div>
+                        <div class="about-text-text">{{products.face['Ультраувлажняющий крем для лица Аква Реотье'].advice}}</div>
                     </div>
                 </div>
             </div>

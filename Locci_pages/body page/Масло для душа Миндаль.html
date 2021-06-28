@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Масло для душа Миндальное</div>
-                    <div class="item-desc">Момент, когда вы впервые попробуете наше знаменитое Миндальное масло для душа, навсегда останется в вашей памяти.При контакте с водой масло мгновенно ...</div>
+                    <div class="item-title">{{products.body['Масло для душа Миндальное'].name}}</div>
+                    <div class="item-desc">{{products.body['Масло для душа Миндальное'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/body/Масло для душа Миндаль.webp">
+                <img :src="products.body['Масло для душа Миндальное'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,14 +47,11 @@
                     <img src="../../img/CO_Co_Almond.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Момент, когда вы впервые попробуете наше знаменитое Миндальное масло для душа, навсегда останется в вашей памяти.
-                            При контакте с водой масло мгновенно превращается в густую роскошную пену, придающую вашему телу нежное атласное сияние.<br>
-                            Оно бережно заботится даже о самой нежной коже и является идеальной альтернативой обычным гелям для душа.Наполните свою ванную пьянящим благоуханием Прованса.
-                            </div>
+                        <div class="about-text-text">{{products.body['Масло для душа Миндальное'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести под душем на влажную кожу, сполоснуть.</div>
+                        <div class="about-text-text">{{products.body['Масло для душа Миндальное'].advice}}</div>
                     </div>
                 </div>
             </div>

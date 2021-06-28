@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Помада для губ Фруктовый нектар, оттенок 080 Provence Calling</div>
-                    <div class="item-desc">Помада, обогащенная фруктовыми экстрактами и витаминами, подарит невероятный уход и пленительный цвет Вашим губам. Выбирайте интенсивность оттенка ...</div>
+                    <div class="item-title">{{products.makeup['Помада для губ Фруктовый нектар, оттенок 080 Provence Calling'].name}}</div>
+                    <div class="item-desc">{{products.makeup['Помада для губ Фруктовый нектар, оттенок 080 Provence Calling'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/makeup/Помада Фруктовый Нектар, 080 Provence Calling.webp">
+                <img :src="products.makeup['Помада для губ Фруктовый нектар, оттенок 080 Provence Calling'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/noSectionKey.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Помада, обогащенная фруктовыми экстрактами и витаминами, подарит невероятный уход и пленительный цвет Вашим губам.
-                            Выбирайте интенсивность оттенка самостоятельно благодаря возможности нанесения в несколько слоев: от легкого сияния до ослепительного насыщенного блеска.</div>
+                        <div class="about-text-text">{{products.makeup['Помада для губ Фруктовый нектар, оттенок 080 Provence Calling'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на кожу губ по мере необходимости</div>
+                        <div class="about-text-text">{{products.makeup['Помада для губ Фруктовый нектар, оттенок 080 Provence Calling'].advice}}</div>
                     </div>
                 </div>
             </div>

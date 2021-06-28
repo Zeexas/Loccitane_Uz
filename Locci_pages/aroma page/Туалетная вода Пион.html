@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная Вода Пион</div>
-                    <div class="item-desc">В первое утро в воздухе разливаются легкие зеленые ноты, соединяющиеся со свежим дыханием рассветного ветра.  Во второе утро еще не ...</div>
+                    <div class="item-title">{{products.aroma_her['Туалетная Вода Пион'].name}}</div>
+                    <div class="item-desc">{{products.aroma_her['Туалетная Вода Пион'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Туалетная вода Пион.webp">
+                <img :src="products.aroma_her['Туалетная Вода Пион'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Peony.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">В первое утро в воздухе разливаются легкие зеленые ноты, соединяющиеся со свежим дыханием рассветного ветра.
-                            Во второе утро еще не распустившийся бутон источает цветочный аромат, который смешивается с благоуханием роз на соседних кустах.
-                            И наконец, в третье утро пион раскрывается, наполняя воздух благоуханием мягких тонов сандалового дерева и белого мускуса.</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная Вода Пион'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите аромат на точки пульсации (шея, запястья, декольте).</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная Вода Пион'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Бальзам для губ Вишнёвый Цвет</div>
-                    <div class="item-desc">Бальзам для губ обогащённый маслом Карите, превосходно питает, смягчает и восстанавливает кожу губ.
-                        Обладает нежным ароматом первых цветов Вишни.</div>
+                    <div class="item-title">{{products.makeup['Бальзам для губ Вишнёвый Цвет'].name}}</div>
+                    <div class="item-desc">{{products.makeup['Бальзам для губ Вишнёвый Цвет'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/makeup/Бальзам для губ Вишневый Цвет.webp">
+                <img :src="products.makeup['Бальзам для губ Вишнёвый Цвет'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,12 +47,11 @@
                     <img src="../../img/CO_Co_CherryBlossom.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Бальзам для губ обогащённый маслом Карите, превосходно питает, смягчает и восстанавливает кожу губ.
-                            Обладает нежным ароматом первых цветов Вишни.</div>
+                        <div class="about-text-text">{{products.makeup['Бальзам для губ Вишнёвый Цвет'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на кожу губ по мере необходимости</div>
+                        <div class="about-text-text">{{products.makeup['Бальзам для губ Вишнёвый Цвет'].advice}}</div>
                     </div>
                 </div>
             </div>

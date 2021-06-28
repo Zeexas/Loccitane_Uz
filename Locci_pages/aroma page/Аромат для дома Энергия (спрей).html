@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Аромат для дома «Энергия»</div>
-                    <div class="item-desc">Момент, который заставляет вас улыбаться! После долгого теплого дня пропитанная солнцем почва Прованса источает аромат, наполненный цветами и ...</div>
+                    <div class="item-title">{{products.aroma_home['Аромат для дома «Энергия»'].name}}</div>
+                    <div class="item-desc">{{products.aroma_home['Аромат для дома «Энергия»'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Аромат для дома Энергия (спрей).webp">
+                <img :src="products.aroma_home['Аромат для дома «Энергия»'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_New_Home.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Момент, который заставляет вас улыбаться! После долгого теплого дня пропитанная солнцем почва Прованса источает аромат, наполненный цветами и травами.
-                            Уют этих летних вечеров обладает великолепием, который заслуживает того, чтобы им делиться… Л’Окситан уловил эту идиллию в аромате с коктейлем из эфирных масел иммортеля, базилика, кипариса, эвкалипта.
-                            Вместе они выражают эту изысканную,чарующую мягкость вечернего воздуха и дарят вам чувство благополучия и веселья.</div>
+                        <div class="about-text-text">{{products.aroma_home['Аромат для дома «Энергия»'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Распылите аромат в воздухе или нанесите на мягкую мебель,шторы, покрывала.</div>
+                        <div class="about-text-text">{{products.aroma_home['Аромат для дома «Энергия»'].advice}}</div>
                     </div>
                 </div>
             </div>

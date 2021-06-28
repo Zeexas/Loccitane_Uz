@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Ультраувлажняющий гель для лица Аква Реотье</div>
-                    <div class="item-desc">Легкий инновационный гель обогащен минерализованной водой из источника Реотье.<br>
-                        Его легкая невесомая текстура состоит из ...</div>
+                    <div class="item-title">{{products.men['Ультраувлажняющий гель для лица Аква Реотье'].name}}</div>
+                    <div class="item-desc">{{products.men['Ультраувлажняющий гель для лица Аква Реотье'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Гель для лица ультраувлажняющий Аква Реотье.webp">
+                <img :src="products.men['Ультраувлажняющий гель для лица Аква Реотье'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,14 +47,11 @@
                     <img src="../../img/CO_Co_Reotier.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Легкий инновационный гель обогащен минерализованной водой из источника Реотье.
-                            Его легкая невесомая текстура состоит из тысячи микропузырьков, которые мгновенно освежают и увлажняют кожу, восстанавливая её водный баланс.
-                            Ваша кожа выглядит сияющей и отдохнувшей.</div>
+                        <div class="about-text-text">{{products.men['Ультраувлажняющий гель для лица Аква Реотье'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносите утром и вечером небольшое количество геля легкими похлопывающими движениями на кожу лица, избегая область вокруг глаз.
-                            Подождите несколько секунд до полного впитывания.</div>
+                        <div class="about-text-text">{{products.men['Ультраувлажняющий гель для лица Аква Реотье'].advice}}</div>
                     </div>
                 </div>
             </div>

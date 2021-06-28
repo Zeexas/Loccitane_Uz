@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Крем для рук охлаждающий Вербена</div>
-                    <div class="item-desc">НОВАЯ ФОРМУЛА Новый крем-гель с охлаждающим эффектом для невероятно глубокого увлажнения кожи рук.<br>
-                        Обогащен эфирными маслами лимона и ...</div>
+                    <div class="item-title">{{products.men['Крем для рук охлаждающий Вербена'].name}}</div>
+                    <div class="item-desc">{{products.men['Крем для рук охлаждающий Вербена'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Крем для рук охлаждающий Вербена.webp">
+                <img :src="products.men['Крем для рук охлаждающий Вербена'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,14 +47,11 @@
                     <img src="../../img/CO_Co_Verbena.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">НОВАЯ ФОРМУЛА Новый крем-гель с охлаждающим эффектом для невероятно глубокого увлажнения кожи рук. 
-                            Обогащен эфирными маслами лимона и чабреца, которые известны своим очищающим и успокаивающим действием. 
-                            Экстракт Вербены из Прованса придаст свежесть вашим ручкам! Особенно актуально использовать в жаркое время года. 
-                            Не оставляет липкого ощущения. Руки наполнены энергией. Тонкий бодрящий аромат свежескошенной Вербены поднимает настроение.</div>
+                        <div class="about-text-text">{{products.men['Крем для рук охлаждающий Вербена'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на кожу рук в течение дня по мере необходимости.</div>
+                        <div class="about-text-text">{{products.men['Крем для рук охлаждающий Вербена'].advice}}</div>
                     </div>
                 </div>
             </div>

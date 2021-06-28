@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Крем для тела Медовый фестиваль</div>
-                    <div class="item-desc">Крем, обогащенный маслом карите (10%) мгновенно питает кожу и оставляет ощущение необыкновенной мягкости и комфорта. Крем легко наносится ...</div>
+                    <div class="item-title">{{products.body['Крем для тела Медовый фестиваль'].name}}</div>
+                    <div class="item-desc">{{products.body['Крем для тела Медовый фестиваль'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/body/Крем для тела Медовый фестиваль.webp">
+                <img :src="products.body['Крем для тела Медовый фестиваль'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Holiday2019.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Крем, обогащенный маслом карите (10%) мгновенно питает кожу и оставляет ощущение необыкновенной мягкости и комфорта.
-                            Крем легко наносится, быстро впитывается, не оставляя ощущения липкости. Крем дарит вашей коже сладкий медовый аромат.</div>
+                        <div class="about-text-text">{{products.body['Крем для тела Медовый фестиваль'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на сухую кожу легкими массажными движениями.</div>
+                        <div class="about-text-text">{{products.body['Крем для тела Медовый фестиваль'].advice}}</div>
                     </div>
                 </div>
             </div>

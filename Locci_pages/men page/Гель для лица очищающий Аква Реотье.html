@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Очищающий гель для лица Аква Реотье</div>
-                    <div class="item-desc">Мягкий гель, обогащенный минерализованной водой из источника Реотье, бережно ...</div>
+                    <div class="item-title">{{products.men['Очищающий гель для лица Аква Реотье'].name}}</div>
+                    <div class="item-desc">{{products.men['Очищающий гель для лица Аква Реотье'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Гель для лица очищающий Аква Реотье.webp">
+                <img :src="products.men['Очищающий гель для лица Аква Реотье'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Reotier.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Мягкий гель, обогащенный минерализованной водой из источника Реотье, бережно очищает кожу, удаляя загрязнения и остатки макияжа. 
-                            Легкий по текстуре, гель не сушит кожу, оставляя чувство комфорта.</div>
+                        <div class="about-text-text">{{products.men['Очищающий гель для лица Аква Реотье'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите небольшое количество геля на влажную кожу лица, избегая область вокруг глаз.<br>
-                            Умойтесь, смойте большим количеством теплой воды. Используйте дважды в день.</div>
+                        <div class="about-text-text">{{products.men['Очищающий гель для лица Аква Реотье'].advice}}</div>
                     </div>
                 </div>
             </div>

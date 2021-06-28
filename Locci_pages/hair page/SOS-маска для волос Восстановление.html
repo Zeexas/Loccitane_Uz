@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">SOS-маска для волос Восстановление</div>
-                    <div class="item-desc">Вам нужен экспресс-уход против секущихся кончиков? Обогащенная 5 эфирными маслами и маслом карите воздушная маска мгновенно восстанавливает и ...</div>
+                    <div class="item-title">{{products.hair['SOS-маска для волос Восстановление'].name}}</div>
+                    <div class="item-desc">{{products.hair['SOS-маска для волос Восстановление'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hair/SOS-маска для волос Восстановление.webp">
+                <img :src="products.hair['SOS-маска для волос Восстановление'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Aromachologie.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Вам нужен экспресс-уход против секущихся кончиков? Обогащенная 5 эфирными маслами и 
-                            маслом карите воздушная маска мгновенно восстанавливает и разглаживает секущиеся кончики.</div>
+                        <div class="about-text-text">{{products.hair['SOS-маска для волос Восстановление'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите на кончики волос, оставьте на 5 минут, тщательно смойте водой.</div>
+                        <div class="about-text-text">{{products.hair['SOS-маска для волос Восстановление'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода Herbae L'Eau</div>
-                    <div class="item-desc">В Провансе, среди диких трав, Вы обнаружите цветок с нежной, но выразительной красотой - белый клевер. Он заключает в себе сущность непредсказуемой ...</div>
+                    <div class="item-title">{{products.aroma_her["Туалетная вода Herbae L'Eau"].name}}</div>
+                    <div class="item-desc">{{products.aroma_her["Туалетная вода Herbae L'Eau"].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Туалетная вода Herbae L'EAU.webp">
+                <img :src="products.aroma_her[`Туалетная вода Herbae L'Eau`].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Herbae.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">В Провансе, среди диких трав, Вы обнаружите цветок с нежной, но выразительной красотой - белый клевер.
-                            Он заключает в себе сущность непредсказуемой женщины, обладающей одновременно мягкостью и силой.
-                            Насладитесь сверкающим букетом цветов, переплетающимся с дикими травами. Кристально-чистые грани белого клевера смешиваются со свежестью нежных лепестков жасмина, алтея и ангелики.</div>
+                        <div class="about-text-text">{{products.aroma_her["Туалетная вода Herbae L'Eau"].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите аромат на точки пульсации (шея, запястья, декольте).</div>
+                        <div class="about-text-text">{{products.aroma_her["Туалетная вода Herbae L'Eau"].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,13 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Бальзам-суфле для массажа Карите-Малыш</div>
-                    <div class="item-desc">Бальзам-суфле для массажа, обогащенный чудодейственным маслом Карите (70%) питает и защищает нежную кожу ребенка.<br>
-                        Массаж с бальзамом усиливает моменты бесконечной нежности между мамой и ребенком.<br>
-                        Рекомендуется использовать для детей старше 3-х месяцев.</div>
+                    <div class="item-title">{{products.baby['Бальзам-суфле для массажа Карите-Малыш'].name}}</div>
+                    <div class="item-desc">{{products.baby['Бальзам-суфле для массажа Карите-Малыш'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/baby/Бальзам-суфле для массажа Карите.webp">
+                <img :src="products.baby['Бальзам-суфле для массажа Карите-Малыш'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -49,12 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Бальзам интенсивно питает и защищает нежную кожу ребенка.<br>
-                            Идеально подходит для нежного массажа, его тающая текстура обволакивает кожу и создает чувство комфорта и мягкости.</div>
+                        <div class="about-text-text">{{products.baby['Бальзам-суфле для массажа Карите-Малыш'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить после ванны, легкими массажными движениями.</div>
+                        <div class="about-text-text">{{products.baby['Бальзам-суфле для массажа Карите-Малыш'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Мыло Цедрат, твердое</div>
-                    <div class="item-desc">Мыло бережно очищает кожу рук и тела, оставляя на ней свежий, яркий и тонкий пикантный аромат.</div>
+                    <div class="item-title">{{products.men['Мыло Цедрат, твердое'].name}}</div>
+                    <div class="item-desc">{{products.men['Мыло Цедрат, твердое'].desc}}</div>
                 <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Мыло Цедрат.webp">
+                <img :src="products.men['Мыло Цедрат, твердое'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,11 +47,11 @@
                     <img src="../../img/CO_Co_Ced.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Мыло бережно очищает кожу рук и тела, оставляя на ней свежий, яркий и тонкий пикантный аромат.</div>
+                        <div class="about-text-text">{{products.men['Мыло Цедрат, твердое'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Вспеньте и нанесите на влажную кожу рук и тела. Тщательно смойте водой.</div>
+                        <div class="about-text-text">{{products.men['Мыло Цедрат, твердое'].advice}}</div>
                     </div>
                 </div>
             </div>

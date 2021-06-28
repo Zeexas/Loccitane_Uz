@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Освежающее молочко для тела Вербена-Цитрус</div>
-                    <div class="item-desc">Освежающее молочко для тела дарит приятное ощущение комфорта и заряжает энергией, все оттенки свежести присутствуют в этом коктейле из ...</div>
+                    <div class="item-title">{{products.men['Освежающее молочко для тела Вербена-Цитрус'].name}}</div>
+                    <div class="item-desc">{{products.men['Освежающее молочко для тела Вербена-Цитрус'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Молочко для тела освежающее Вербена-Цитрус.webp">
+                <img :src="products.men['Освежающее молочко для тела Вербена-Цитрус'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Verbena.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Освежающее молочко для тела дарит приятное ощущение комфорта и заряжает энергией, все оттенки свежести присутствуют в этом коктейле из цитрусовых фруктов и толченых листьев лимона.
-                            Бодрящая пикантная композиция, в состав которой входит органическая вербена из Прованса, а также грейпфрут и лимон из Средиземноморья, способна наполнить день яркими красками.</div>
+                        <div class="about-text-text">{{products.men['Освежающее молочко для тела Вербена-Цитрус'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить массажными движениями на чистую сухую кожу тела</div>
+                        <div class="about-text-text">{{products.men['Освежающее молочко для тела Вербена-Цитрус'].advice}}</div>
                     </div>
                 </div>
             </div>

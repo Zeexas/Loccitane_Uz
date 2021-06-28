@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода Зеленый чай</div>
-                    <div class="item-desc">Когда приходит время выпить чашечку чая, укутываясь от ветра или сидя в тени сакуры, кажется, что мгновение замирает. Это особый момент спокойствия и ...</div>
+                    <div class="item-title">{{products.aroma_her['Туалетная вода Зеленый чай'].name}}</div>
+                    <div class="item-desc">{{products.aroma_her['Туалетная вода Зеленый чай'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Туалетная вода Зеленый чай.webp">
+                <img :src="products.aroma_her['Туалетная вода Зеленый чай'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_GR_TheVert.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Когда приходит время выпить чашечку чая, укутываясь от ветра или сидя в тени сакуры, кажется, что мгновение замирает.
-                            Это особый момент спокойствия и умиротворения, далекий от шума и суеты повседневной жизни, когда Вы в полной мере можете насладиться происходящим.
-                            Изысканный аромат, подходящий мужчинам и женщинам, сочетает в себе тонкость зеленого чая и свежесть сладкого апельсина в букете цветочных и цитрусовых нот,создавая уникальный миг гармонии.</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная вода Зеленый чай'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите аромат на точки пульсации (шея, запястья, декольте).</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная вода Зеленый чай'].advice}}</div>
                     </div>
                 </div>
             </div>

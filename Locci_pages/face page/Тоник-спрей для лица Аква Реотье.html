@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Увлажняющий спрей для лица Aqua Reotier</div>
-                    <div class="item-desc">Обогащенный глицерином и гиалуроновой кислотой освежающий спрей смягчает кожу, оставляя на ней нежный аромат морского ...</div>
+                    <div class="item-title">{{products.face['Увлажняющий спрей для лица Aqua Reotier'].name}}</div>
+                    <div class="item-desc">{{products.face['Увлажняющий спрей для лица Aqua Reotier'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Тоник-спрей для лица Аква Реотье.webp">
+                <img :src="products.face['Увлажняющий спрей для лица Aqua Reotier'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Reotier.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Обогащенный глицерином и гиалуроновой кислотой освежающий спрей смягчает кожу, оставляя на ней нежный аромат морского бриза.
-                            Гиалуроновая кислота помогает наполнить кожу влагой.</div>
+                        <div class="about-text-text">{{products.face['Увлажняющий спрей для лица Aqua Reotier'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите спрей как самостоятельное средство после очищения кожи.<br><br>
-                            Идеально подходит для закрепления макияжа и как термальная вода.</div>
+                        <div class="about-text-text">{{products.face['Увлажняющий спрей для лица Aqua Reotier'].advice}}</div>
                     </div>
                 </div>
             </div>

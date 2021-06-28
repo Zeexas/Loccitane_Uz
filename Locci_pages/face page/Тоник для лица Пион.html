@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Совершенный тоник для лица Пион</div>
-                    <div class="item-desc">Завершающий этап ритуала очищения, наполняющий кожу удивительной свежестью, — увлажнение и тонизирование. Формула тоника, обогащенная ...</div>
+                    <div class="item-title">{{products.face['Совершенный тоник для лица Пион'].name}}</div>
+                    <div class="item-desc">{{products.face['Совершенный тоник для лица Пион'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Тоник для лица Пион.webp">
+                <img :src="products.face['Совершенный тоник для лица Пион'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Peony.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Завершающий этап ритуала очищения, наполняющий кожу удивительной свежестью, — увлажнение и тонизирование. 
-                            Формула тоника, обогащенная экстрактом пиона, сужает поры, делая кожу более гладкой и бархатистой. 
-                            Применяется утром и вечером, тонизирует и готовит кожу к использованию средств по уходу.</div>
+                        <div class="about-text-text">{{products.face['Совершенный тоник для лица Пион'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на лицо и шею с помощью ватного диска.</div>
+                        <div class="about-text-text">{{products.face['Совершенный тоник для лица Пион'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Гель для бритья Можжевельник</div>
-                    <div class="item-desc">Освежающий гель для бритья, обогащенный эфирным маслом можжевельника,превращается в шелковистую пену и приподнимает ...</div>
+                    <div class="item-title">{{products.men['Гель для бритья Можжевельник'].name}}</div>
+                    <div class="item-desc">{{products.men['Гель для бритья Можжевельник'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Гель для бритья Cade.webp">
+                <img :src="products.men['Гель для бритья Можжевельник'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Cade.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Освежающий гель для бритья, обогащенный эфирным маслом можжевельника, превращается в шелковистую пену и приподнимает волоски бороды, обеспечивая безупречное скольжение бритвы и комфортное бритье.
-                            Средство защищает кожу от острого лезвия бритвы и помогает снять чувства стянутости и раздражения от бритья.
-                            Подходит для нормальной и жирной кожи. Формула разработана специально для мужчин и протестирована дерматологами.</div>
+                        <div class="about-text-text">{{products.men['Гель для бритья Можжевельник'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите пену на влажную кожу, приступите к бритью. По окончании бритья тщательно смойте водой.</div>
+                        <div class="about-text-text">{{products.men['Гель для бритья Можжевельник'].advice}}</div>
                     </div>
                 </div>
             </div>

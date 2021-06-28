@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Бальзам после бритья Можжевельник</div>
-                    <div class="item-desc">Обогащенный эфирным маслом можжевельника и маслом карите бальзам увлажняет и помогает смягчить раздраженную после бритья кожу.<br>
-                        Формула разработана специально для снятия ...</div>
+                    <div class="item-title">{{products.men['Бальзам после бритья Можжевельник'].name}}</div>
+                    <div class="item-desc">{{products.men['Бальзам после бритья Можжевельник'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Бальзам после бритья Cade.webp">
+                <img :src="products.men['Бальзам после бритья Можжевельник'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,15 +47,11 @@
                     <img src="../../img/CO_Co_Cade.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Обогащенный эфирным маслом можжевельника и маслом карите бальзам увлажняет и помогает смягчить раздраженную после бритья кожу.
-                            Формула разработана специально для снятия ощущений раздражения и стянутости,вызванных бритьем.
-                            Бальзам успокаивает кожу, снимает чувство жжения и дискомфорта,способствует заживлению ранок.
-                            Благодаря легкой текстуре средство быстро впитывается, не оставляя ощущения жирности.
-                            Бальзам защищает эпидермис от внешних агрессивных факторов – загрязнения окружающей среды, кондиционированного воздуха, мороза.</div>
+                        <div class="about-text-text">{{products.men['Бальзам после бритья Можжевельник'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на лицо и шею после бритья.</div>
+                        <div class="about-text-text">{{products.men['Бальзам после бритья Можжевельник'].advice}}</div>
                     </div>
                 </div>
             </div>

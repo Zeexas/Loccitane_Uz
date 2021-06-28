@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Свеча «Источник гармонии»</div>
-                    <div class="item-desc">Откройте себя заново! Иногда все, что вам нужно сделать, - это скрыться на некоторое время, чтобы снова обрести себя. Представьте себе прогулку ...</div>
+                    <div class="item-title">{{products.aroma_home['Свеча «Источник гармонии»'].name}}</div>
+                    <div class="item-desc">{{products.aroma_home['Свеча «Источник гармонии»'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Свеча Источник гармонии.webp">
+                <img :src="products.aroma_home['Свеча «Источник гармонии»'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_New_Home.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Откройте себя заново! Иногда все, что вам нужно сделать - это скрыться на некоторое время, чтобы снова обрести себя.
-                            Представьте себе прогулку по волшебному провансальскому лесу, вдыхая свежий смолистый аромат сосен, слушая мелодию леса на заднем плане. \
-                            L'Occitane запечатлел это безмятежное ощущение в свече, содержащей эфирные масла кипариса, чабреца, эвкалипта, можжевельника и иланг-иланга, которое дарит вам чувство благополучия и душевного баланса.</div>
+                        <div class="about-text-text">{{products.aroma_home['Свеча «Источник гармонии»'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Зажгите фитиль и насладитесь ароматом. Соблюдайте меры предосторожности.</div>
+                        <div class="about-text-text">{{products.aroma_home['Свеча «Источник гармонии»'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Крем для Рук Пион</div>
-                    <div class="item-desc">Нежный крем интенсивно увлажняет кожу рук, оставляя на ней цветочный аромат Пиона.</div>
+                    <div class="item-title">{{products.hands['Крем для Рук Пион'].name}}</div>
+                    <div class="item-desc">{{products.hands['Крем для Рук Пион'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hands/Крем для рук Пион.webp">
+                <img :src="products.hands['Крем для Рук Пион'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,11 +47,11 @@
                     <img src="../../img/CO_Co_Peony.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Нежный крем интенсивно увлажняет кожу рук, оставляя на ней цветочный аромат Пиона.</div>
+                        <div class="about-text-text">{{products.hands['Крем для Рук Пион'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на чистую сухую кожу рук по мере необходимости.</div>
+                        <div class="about-text-text">{{products.hands['Крем для Рук Пион'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Деодорант Л'Окситан</div>
-                    <div class="item-desc">Шариковый деодорант помогает на 48 часов предотвратить неприятные запахи, вызванные развитием бактерий, оставляя на коже свежий аромат.<br>
-                        Формула эффективно защищает даже ...</div>
+                    <div class="item-title">{{products.men["Деодорант Л'Окситан"].name}}</div>
+                    <div class="item-desc">{{products.men["Деодорант Л'Окситан"].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Дезодорант Локситан.webp">
+                <img :src="products.men[`Деодорант Л'Окситан`].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,13 +47,11 @@
                     <img src="../../img/CO_Co_Occitan.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Шариковый деодорант помогает на 48 часов предотвратить неприятные запахи, вызванные развитием бактерий, оставляя на коже свежий аромат.
-                            Формула эффективно защищает даже в экстремальных условиях (интенсивные физические нагрузки, стресс, высокие температуры).
-                            Средство легко наносится, быстро высыхает и не оставляет следов на одежде. Деодорант не содержит спирт и соли алюминия.</div>
+                        <div class="about-text-text">{{products.men["Деодорант Л'Окситан"].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на чистое тело.</div>
+                        <div class="about-text-text">{{products.men["Деодорант Л'Окситан"].advice}}</div>
                     </div>
                 </div>
             </div>

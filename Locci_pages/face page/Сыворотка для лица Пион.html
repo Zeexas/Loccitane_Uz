@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Совершенная сыворотка для лица Пион</div>
-                    <div class="item-desc">Новая ультралегкая сыворотка с нежной и свежей текстурой заметно улучшает качество кожи. Тон выглядит более однородным, кожа становится гладкой ...</div>
+                    <div class="item-title">{{products.face['Совершенная сыворотка для лица Пион'].name}}</div>
+                    <div class="item-desc">{{products.face['Совершенная сыворотка для лица Пион'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Сыворотка для лица Пион.webp">
+                <img :src="products.face['Совершенная сыворотка для лица Пион'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,18 +47,11 @@
                     <img src="../../img/CO_Co_Peony.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Новая ультралегкая сыворотка с нежной и свежей текстурой заметно улучшает качество кожи. 
-                            Тон выглядит более однородным, кожа становится гладкой, бархатистой, свежей и сияющей.<br><br>
-                            - Текстура кожи заметно более гладкая<br><br>
-                            - Несовершенства кожи менее заметны<br>
-                            - Поры мгновенно сужаются - 84%<br>
-                            - Усиливает сияние кожи - 47%<br><br>
-                            - Тон кожи более однородный - 41%<br>
-                            </div>
+                        <div class="about-text-text">{{products.face['Совершенная сыворотка для лица Пион'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить утром и вечером перед основным уходом.</div>
+                        <div class="about-text-text">{{products.face['Совершенная сыворотка для лица Пион'].advice}}</div>
                     </div>
                 </div>
             </div>

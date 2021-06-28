@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода О де Бо</div>
-                    <div class="item-desc">Чувственный и загадочный аромат, вдохновленный рыцарями из селения Ле-Бо-де-Прованс, их силой и мужеством.<br>
-                        Легенда возникновения туалетной воды ... </div>
+                    <div class="item-title">{{products.aroma_him['Туалетная вода О де Бо'].name}}</div>
+                    <div class="item-desc">{{products.aroma_him['Туалетная вода О де Бо'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Туалетная вода BAVX.webp">
+                <img :src="products.aroma_him['Туалетная вода О де Бо'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,13 +47,11 @@
                     <img src="../../img/CO_Co_Baux.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Чувственный и загадочный аромат, вдохновленный рыцарями из селения Ле-Бо-де-Прованс, их силой и мужеством.
-                            Легенда возникновения туалетной воды полна загадок… Рыцари, приехавшие в селение, шли на свет яркой путеводной звезды.
-                            Когда они открыли свои дорожные сундуки, ветер подхватил специи, ладан и пыль драгоценной древесины кедра и занес на самые верхушки кипарисовых деревьев.</div>
+                        <div class="about-text-text">{{products.aroma_him['Туалетная вода О де Бо'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносите на точки пульсации (шея, запястья)</div>
+                        <div class="about-text-text">{{products.aroma_him['Туалетная вода О де Бо'].advice}}</div>
                     </div>
                 </div>
             </div>

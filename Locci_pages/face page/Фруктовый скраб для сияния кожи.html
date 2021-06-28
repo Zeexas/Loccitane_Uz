@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Фруктовый скраб для сияния кожи</div>
-                    <div class="item-desc">Нежная джемовая текстура скраба с натуральными микрогранулами эффективно очищает и отшелушивает кожу. Экстракт корсиканского помело оказывает ...</div>
+                    <div class="item-title">{{products.face['Фруктовый скраб для сияния кожи'].name}}</div>
+                    <div class="item-desc">{{products.face['Фруктовый скраб для сияния кожи'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Фруктовый скраб для сияния кожи.webp">
+                <img :src="products.face['Фруктовый скраб для сияния кожи'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,14 +47,11 @@
                     <img src="../../img/CO_Co_Infusion.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Нежная джемовая текстура скраба с натуральными микрогранулами эффективно очищает и отшелушивает кожу. 
-                            Экстракт корсиканского помело оказывает мгновенное эксфолиирующее действие, и уже после первого применения кожа выглядит гладкой и сияющей, словно светится изнутри. 
-                            Подходит для нормальной и комбинированной кожи.</div>
+                        <div class="about-text-text">{{products.face['Фруктовый скраб для сияния кожи'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите достаточное количество скраба на влажную кожу, помассируйте круговыми движениями, затем смойте водой. 
-                            Используйте 1-2 раза в неделю.</div>
+                        <div class="about-text-text">{{products.face['Фруктовый скраб для сияния кожи'].advice}}</div>
                     </div>
                 </div>
             </div>

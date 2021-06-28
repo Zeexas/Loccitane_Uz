@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Шампунь для волос Цитрус - Вербена</div>
-                    <div class="item-desc">Шампунь для ежедневного использования. Хорошо очищает волосы, не раздражая при этом кожу головы.<br>
-                        Обогащен органическим экстрактом ...</div>
+                    <div class="item-title">{{products.men['Шампунь для волос Цитрус - Вербена'].name}}</div>
+                    <div class="item-desc">{{products.men['Шампунь для волос Цитрус - Вербена'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Шампунь для волос Цитрус - Вербена.webp">
+                <img :src="products.men['Шампунь для волос Цитрус - Вербена'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,14 +47,11 @@
                     <img src="../../img/CO_Co_Verbena.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Шампунь для ежедневного использования. Хорошо очищает волосы, не раздражая при этом кожу головы.
-                            Обогащен органическим экстрактом вербены, эфирным маслом лимона и настоем из цветков липы.
-                            После применения шампуня волосы приобретают мягкость, блеск и силу. После использования на волосах остается легкий цитрусовый аромат.
-                            Подходит для всех типов волос.</div>
+                        <div class="about-text-text">{{products.men['Шампунь для волос Цитрус - Вербена'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на влажные волосы массирующими движениями, после смыть водой. Повторять процедуру 1-2 раза.</div>
+                        <div class="about-text-text">{{products.men['Шампунь для волос Цитрус - Вербена'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода Праздничный сад</div>
-                    <div class="item-desc">Утонченный аромат окутывает нежной вуалью душистых цветов из солнечных садов Прованса. Насладитесь гармонией цветочной феерии, открывающейся ...</div>
+                    <div class="item-title">{{products.aroma_her['Туалетная вода Праздничный сад'].name}}</div>
+                    <div class="item-desc">{{products.aroma_her['Туалетная вода Праздничный сад'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Туалетная вода Праздничный сад.webp">
+                <img :src="products.aroma_her['Туалетная вода Праздничный сад'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/noSectionKey.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Утонченный аромат окутывает нежной вуалью душистых цветов из солнечных садов Прованса.
-                            Насладитесь гармонией цветочной феерии, открывающейся нежными нотами в этом аромате.</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная вода Праздничный сад'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите аромат на точки пульсации (шея, запястья, декольте).</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная вода Праздничный сад'].advice}}</div>
                     </div>
                 </div>
             </div>

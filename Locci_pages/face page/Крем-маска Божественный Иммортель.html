@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Крем-маска Божественный Иммортель</div>
-                    <div class="item-desc">Божественная крем-маска более чем на 90 % состоит из натуральных ингредиентов и содержит в себе эфирное масла иммортеля, масло карите и ...</div>
+                    <div class="item-title">{{products.face['Крем-маска Божественный Иммортель'].name}}</div>
+                    <div class="item-desc">{{products.face['Крем-маска Божественный Иммортель'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Крем-маска Божественный Иммортель.webp">
+                <img :src="products.face['Крем-маска Божественный Иммортель'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Immortelle.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Божественная крем-маска более чем на 90 % состоит из натуральных ингредиентов и содержит в себе эфирное масла иммортеля, масло карите и ладанника.
-                            Эта уникальная комбинация восстанавливает очень сухую, зрелую кожу, позволяет бороться с возрастными изменениями и дарит коже истинный комфорт и наслаждение.</div>
+                        <div class="about-text-text">{{products.face['Крем-маска Божественный Иммортель'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить крем тонким слоем на очищенную кожу лица для ежедневного ухода; 1-2 раза в неделю наносить толстым слоем в качестве  маски, оставить на несколько минут, затем удалить остатки с помощью ватного диска.</div>
+                        <div class="about-text-text">{{products.face['Крем-маска Божественный Иммортель'].advice}}</div>
                     </div>
                 </div>
             </div>

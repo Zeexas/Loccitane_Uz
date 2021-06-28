@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Тоник-спрей для лица Карите</div>
-                    <div class="item-desc">Мягкий бесспиртовой тоник для лица увлажняет, освежает и смягчает кожу. 
-                        Удобный формат тоника позволяет использовать его в течение всего дня.</div>
+                    <div class="item-title">{{products.face['Тоник-спрей для лица Карите'].name}}</div>
+                    <div class="item-desc">{{products.face['Тоник-спрей для лица Карите'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Тоник-спрей для лица Карите.webp">
+                <img :src="products.face['Тоник-спрей для лица Карите'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,13 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Мягкий бесспиртовой тоник для лица увлажняет, освежает и смягчает кожу. 
-                            Удобный формат тоника позволяет использовать его в течение всего дня.</div>
+                        <div class="about-text-text">{{products.face['Тоник-спрей для лица Карите'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Способ применения: нанесите на лицо, держа флакон на расстоянии 20 см от кожи. 
-                            При нанесении закрывайте глаза.</div>
+                        <div class="about-text-text">{{products.face['Тоник-спрей для лица Карите'].advice}}</div>
                     </div>
                 </div>
             </div>

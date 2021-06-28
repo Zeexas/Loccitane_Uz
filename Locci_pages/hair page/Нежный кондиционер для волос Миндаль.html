@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Нежный кондиционер для волос Миндаль</div>
-                    <div class="item-desc">Кондиционер с миндальным маслом из Прованса помогает смягчить и распутать волосы, придавая им сияние. Ваши локоны приобретают тонкий аромат свежего миндаля.</div>
+                    <div class="item-title">{{products.hair['Нежный кондиционер для волос Миндаль'].name}}</div>
+                    <div class="item-desc">{{products.hair['Нежный кондиционер для волос Миндаль'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hair/Нежный кондиционер для волос Миндаль.webp">
+                <img :src="products.hair['Нежный кондиционер для волос Миндаль'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Almond.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Кондиционер с миндальным маслом из Прованса помогает смягчить и распутать волосы, придавая им сияние.
-                            Ваши локоны приобретают тонкий аромат свежего миндаля.</div>
+                        <div class="about-text-text">{{products.hair['Нежный кондиционер для волос Миндаль'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Способ применения: нанести на вымытые волосы, распределить по всей длине, оставить на 3 минуты, смыть водой.</div>
+                        <div class="about-text-text">{{products.hair['Нежный кондиционер для волос Миндаль'].advice}}</div>
                     </div>
                 </div>
             </div>

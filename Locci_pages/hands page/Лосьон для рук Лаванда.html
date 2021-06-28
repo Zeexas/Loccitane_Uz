@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Увлажняющий Лосьон для Рук Лаванда</div>
-                    <div class="item-desc">Лаванда была одним из первых цветов, которые Оливье Боссан, основатель L'OCCITANE, подверг дистилляции. 
-                        Называемый в Провансе «синим золотом», этот цветок служит ароматным символом юга Франции.</div>
+                    <div class="item-title">{{products.hands['Увлажняющий Лосьон для Рук Лаванда'].name}}</div>
+                    <div class="item-desc">{{products.hands['Увлажняющий Лосьон для Рук Лаванда'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hands/Лосьон для рук Лаванда.webp">
+                <img :src="products.hands['Увлажняющий Лосьон для Рук Лаванда'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,12 +47,11 @@
                     <img src="../../img/CO_Co_Lavender.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Неоспоримое достоинство этого средства - благоухающий аромат лаванды, который окутает ваши руки ароматной заботой. Увлажняющий лосьон для рук быстро впитывается и восстанавливает гидролипидную пленку кожи после мытья рук. 
-                            Эфирное масло лаванды, питательное масло карите и экстракт меда моментально увлажняют и смягчают кожу.</div>
+                        <div class="about-text-text">{{products.hands['Увлажняющий Лосьон для Рук Лаванда'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на кожу рук массажными движениями.</div>
+                        <div class="about-text-text">{{products.hands['Увлажняющий Лосьон для Рук Лаванда'].advice}}</div>
                     </div>
                 </div>
             </div>

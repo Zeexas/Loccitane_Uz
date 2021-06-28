@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Гель для душа Л'Окситан</div>
-                    <div class="item-desc">Обогащенный эфирным маслом лаванды гель очищает кожу и волосы, придавая им пикантный ...</div>
+                    <div class="item-title">{{products.men[`Гель для душа Л'Окситан`].name}}</div>
+                    <div class="item-desc">{{products.men[`Гель для душа Л'Окситан`].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Гель для душа Локситан.webp">
+                <img :src="products.men[`Гель для душа Л'Окситан`].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Occitan.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Обогащенный эфирным маслом лаванды гель очищает кожу и волосы, придавая им пикантный перечный аромат, который подчеркивается нотой терпкого мускатного ореха.
-                            Истинный мужской аромат, воплощающий аутентичную элегантность, подарит заряд бодрости на целый день.</div>
+                        <div class="about-text-text">{{products.men[`Гель для душа Л'Окситан`].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести небольшое количество геля на влажную кожу, вспенить, смыть теплой водой.</div>
+                        <div class="about-text-text">{{products.men[`Гель для душа Л'Окситан`].advice}}</div>
                     </div>
                 </div>
             </div>

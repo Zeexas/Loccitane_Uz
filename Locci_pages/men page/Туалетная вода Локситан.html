@@ -27,13 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода Л'Окситан</div>
-                    <div class="item-desc">Этот аромат - один из бестселлеров L'Occitane, сочетающий в себе дразнящий и свежий аромат  с глубокими чувственными и древесными нотами.<br>
-                        В нем идеально подобраны все чарующие ароматы летнего Прованса.<br>
-                        Верхние ноты туалетной воды раскрываются благоуханием лаванды в сочетании с черным перцем, что придает аромату деликатную изюминку, а сердечные ноты муската и корицы добавляют ему насыщенный смелый оттенок.</div>
+                    <div class="item-title">{{products.aroma_him["Туалетная вода Л'Окситан"].name}}</div>
+                    <div class="item-desc">{{products.aroma_him["Туалетная вода Л'Окситан"].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Туалетная вода Локситан.webp">
+                <img :src="products.aroma_him[`Туалетная вода Л'Окситан`].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -49,13 +47,11 @@
                     <img src="../../img/CO_Co_Occitan.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Аромат вдохновлен природными чарующими красками летнего Прованса,насыщенный и таинственный, 
-                            как дистиллят цветков лаванды, сочетающий в себе дразнящие свежие ноты с глубокими чувственными и древесными.Коктейль, где пикантный перец подчеркивается нотой терпкого мускатного ореха.
-                            Истинный мужской аромат, воплощающий аутентичную элегантность.</div>
+                        <div class="about-text-text">{{products.aroma_him["Туалетная вода Л'Окситан"].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносите на точки пульсации (шея, запястья)</div>
+                        <div class="about-text-text">{{products.aroma_him["Туалетная вода Л'Окситан"].advice}}</div>
                     </div>
                 </div>
             </div>

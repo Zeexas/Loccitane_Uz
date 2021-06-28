@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Энергетический флюид для лица Можжевельник</div>
-                    <div class="item-desc">Увлажняющий флюид пробуждает кожу, заряжая ее энергией. Флюид быстро впитывается, не оставляя ощущения липкости, придавая коже матовость ... </div>
+                    <div class="item-title">{{products.men['Энергетический флюид для лица Можжевельник'].name}}</div>
+                    <div class="item-desc">{{products.men['Энергетический флюид для лица Можжевельник'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Энергетический флюид для лица Cade.webp">
+                <img :src="products.men['Энергетический флюид для лица Можжевельник'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,14 +47,11 @@
                     <img src="../../img/noSectionKey.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Увлажняющий флюид пробуждает кожу, заряжая ее энергией. 
-                            Флюид быстро впитывается, не оставляя ощущения липкости, придавая коже матовость. 
-                            Обогащенный эфирным маслом можжевельника, флюид обладает защитными свойствами и помогает сократить избыточную выработку себума.
-                            Формула разработана специально для мужской кожи и прошла дерматологический контроль.</div>
+                        <div class="about-text-text">{{products.men['Энергетический флюид для лица Можжевельник'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на очищенную кожу лица утром и/или вечером.</div>
+                        <div class="about-text-text">{{products.men['Энергетический флюид для лица Можжевельник'].advice}}</div>
                     </div>
                 </div>
             </div>

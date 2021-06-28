@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Соль-скраб для тела Вербена</div>
-                    <div class="item-desc">Оригинальный скраб для невероятно гладкой кожи с ароматом цитрусовой свежести. Сочетает соль Средиземного моря с натуральными маслами виноградных ...</div>
+                    <div class="item-title">{{products.body['Соль-скраб для тела Вербена'].name}}</div>
+                    <div class="item-desc">{{products.body['Соль-скраб для тела Вербена'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/body/Соль-скраб для тела Вербена.webp">
+                <img :src="products.body['Соль-скраб для тела Вербена'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,14 +47,11 @@
                     <img src="../../img/CO_Co_Verbena.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Оригинальный скраб для невероятно гладкой кожи с ароматом цитрусовой свежести.
-                            Сочетает соль Средиземного моря с натуральными маслами виноградных косточек, абрикосовым и миндальным - для питания и увлажнения.
-                            Также содержит освежающие и тонизирующие экстракты вербены, лимона и апельсин. Скраб удаляет мертвые клетки с поверхности кожи и стимулирует клеточную активность, тонизирует и разглаживает кожу тела.
-                            После глубокой эксфолиации улучшаются обменные процессы, кожа становится гладкой и шелковистой.</div>
+                        <div class="about-text-text">{{products.body['Соль-скраб для тела Вербена'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на влажную кожу массирующими движениями, смыть водой</div>
+                        <div class="about-text-text">{{products.body['Соль-скраб для тела Вербена'].advice}}</div>
                     </div>
                 </div>
             </div>

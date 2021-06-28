@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Смягчающее масло для тела Миндальное</div>
-                    <div class="item-desc">Миндаль славится своим свойством смягчать кожу. L'Occitane использовала удивительную тонизирующую способность миндаля с юга Франции в продуктах по ...</div>
+                    <div class="item-title">{{products.body['Смягчающее масло для тела Миндальное'].name}}</div>
+                    <div class="item-desc">{{products.body['Смягчающее масло для тела Миндальное'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/body/Смягчающее масло для тела Миндаль.webp">
+                <img :src="products.body['Смягчающее масло для тела Миндальное'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Almond.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Миндаль славится своим свойством смягчать кожу. L'Occitane использовала удивительную тонизирующую способность миндаля с юга Франции в продуктах по уходу за телом и 
-                            гигиенических средствах, которые не только приятно пахнут и легко наносятся, но и невероятно эффективны.<br>
-                            Смягчающее масло для тела – уникальное средство по уходу за кожей. Богатое содержанием миндаля и питательных липидов, масло от растяжек смягчает кожу, в то же время сохраняя ее естественный баланс увлажненности и оставляя приятный миндальный аромат.</div>
+                        <div class="about-text-text">{{products.body['Смягчающее масло для тела Миндальное'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на кожу тела массажными движениями.</div>
+                        <div class="about-text-text">{{products.body['Смягчающее масло для тела Миндальное'].advice}}</div>
                     </div>
                 </div>
             </div>

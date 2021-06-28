@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Деодорант-стик О де Бо</div>
-                    <div class="item-desc">Этот бесспиртовой дезодорант очень комфортен в использовании - мягко скользит по поверхности кожи и быстро высыхает.<br>
-                        Его формула блокирует ...</div>
+                    <div class="item-title">{{products.men['Деодорант-стик О де Бо'].name}}</div>
+                    <div class="item-desc">{{products.men['Деодорант-стик О де Бо'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Дезодорант-стик Бо.webp">
+                <img :src="products.men['Деодорант-стик О де Бо'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,13 +47,11 @@
                     <img src="../../img/CO_Co_Baux.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Этот бесспиртовой дезодорант очень комфортен в использовании - мягко скользит по поверхности кожи и быстро высыхает. 
-                            Его формула блокирует распространение бактерий и предотвращает появление неприятного запаха. 
-                            Прекрасное дополнение к семейству продуктов Eau des Baux - чувственный и волнующий аромат кипариса и ладана.</div>
+                        <div class="about-text-text">{{products.men['Деодорант-стик О де Бо'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на чистое тело.</div>
+                        <div class="about-text-text">{{products.men['Деодорант-стик О де Бо'].advice}}</div>
                     </div>
                 </div>
             </div>

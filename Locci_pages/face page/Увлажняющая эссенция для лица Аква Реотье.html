@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Ультраувлажняющая эссенция для лица Аква Реотье</div>
-                    <div class="item-desc">Обогащенная минерализованной водой из источника Реотье и гиалуроновой кислотой, эссенция мгновенно увлажняет кожу, подготавливая её к дальнейшим ...</div>
+                    <div class="item-title">{{products.face['Ультраувлажняющая эссенция для лица Аква Реотье'].name}}</div>
+                    <div class="item-desc">{{products.face['Ультраувлажняющая эссенция для лица Аква Реотье'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Увлажняющая эссенция для лица Аква Реотье.webp">
+                <img :src="products.face['Ультраувлажняющая эссенция для лица Аква Реотье'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Reotier.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Обогащенная минерализованной водой из источника Реотье и гиалуроновой кислотой, эссенция мгновенно увлажняет кожу, подготавливая её к дальнейшим этапам ухода. 
-                            В результате кожа лица выглядит более свежей и сияющей.</div>
+                        <div class="about-text-text">{{products.face['Ультраувлажняющая эссенция для лица Аква Реотье'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Способ применения: нанесите на лицо небольшое количество средства на очищенную кожу лица</div>
+                        <div class="about-text-text">{{products.face['Ультраувлажняющая эссенция для лица Аква Реотье'].advice}}</div>
                     </div>
                 </div>
             </div>

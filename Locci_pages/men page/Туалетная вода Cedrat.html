@@ -27,13 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода Цедрат</div>
-                    <div class="item-desc">Яркий, элегантный аромат для сильных, уверенных в себе мужчин, уникальных и неповторимых.<br>
-                        Парфюмерная композиция построена вокруг главной солирующей ноты - Цедрата.<br>
-                        Свежие цитрусовые, теплые мускусные и мягкие древесные ноты делают этот аромат чувственным и многогранным.</div>
+                    <div class="item-title">{{products.aroma_him['Туалетная вода Цедрат'].name}}</div>
+                    <div class="item-desc">{{products.aroma_him['Туалетная вода Цедрат'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Туалетная вода Cedrat.webp">
+                <img :src="products.aroma_him['Туалетная вода Цедрат'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -49,13 +47,11 @@
                     <img src="../../img/CO_Co_Ced.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Цедрат – чрезвычайно мужественный цитрусовый фрукт с грубой кожурой, аромат которого выражает сущность природы, полной контрастов и взрывающейся энергии.
-                            Свежая и пикантная композиция раскрывает тонкие пряные ноты на чувственной древесной базе.
-                            Яркий цитрусовый аромат мгновенно дарит заряд бодрости для динамичного и активного дня.</div>
+                        <div class="about-text-text">{{products.aroma_him['Туалетная вода Цедрат'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносите на точки пульсации (шея, запястья)</div>
+                        <div class="about-text-text">{{products.aroma_him['Туалетная вода Цедрат'].advice}}</div>
                     </div>
                 </div>
             </div>

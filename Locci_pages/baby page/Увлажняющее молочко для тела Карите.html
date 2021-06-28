@@ -27,13 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Увлажняющее молочко для тела Карите-Малыш</div>
-                    <div class="item-desc">Благодаря легкой формуле нежное молочко увлажняет, питает и помогает восстановить естественный барьер деликатной кожи малыша.<br>
-                        Молочко содержит 95% натуральных ингредиентов и подходит для бережной заботы о самых маленьких.<br>
-                        Рекомендуется использовать для детей старше 3-х месяцев.</div>
+                    <div class="item-title">{{products.baby['Увлажняющее молочко для тела Карите-Малыш'].name}}</div>
+                    <div class="item-desc">{{products.baby['Увлажняющее молочко для тела Карите-Малыш'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/baby/Увлажняющее молочко для тела Карите.webp">
+                <img :src="products.baby['Увлажняющее молочко для тела Карите-Малыш'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -49,13 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Легкое молочко для лица и тела увлажняет и мгновенно питает нежную кожу малыша, 
-                            не нарушая при этом естественную среду гидролипидного слоя, сохраняя нежную кожу ребенка.
-                            Молочко обладает успокаивающим эффектом.</div>
+                        <div class="about-text-text">{{products.baby['Увлажняющее молочко для тела Карите-Малыш'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить массажными движениями после купания по мере необходимости.</div>
+                        <div class="about-text-text">{{products.baby['Увлажняющее молочко для тела Карите-Малыш'].advice}}</div>
                     </div>
                 </div>
             </div>

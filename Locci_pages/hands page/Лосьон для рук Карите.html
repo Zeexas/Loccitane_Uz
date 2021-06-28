@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Лосьон для рук Карите</div>
-                    <div class="item-desc">Лосьон для рук и тела, обогащенный 5% масла карите и экстрактом меда, увлажняет и питает кожу. Легкая текстура мгновенно впитывается, не оставляя ...</div>
+                    <div class="item-title">{{products.hands['Лосьон для рук Карите'].name}}</div>
+                    <div class="item-desc">{{products.hands['Лосьон для рук Карите'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hands/Лосьон для рук Карите.webp">
+                <img :src="products.hands['Лосьон для рук Карите'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Лосьон для рук и тела, обогащенный 5% масла карите и экстрактом меда, увлажняет и питает кожу.
-                            Легкая текстура мгновенно впитывается, не оставляя ощущения липкости. Лосьон делает кожу нежной, придавая ей мягкий аромат карите.</div>
+                        <div class="about-text-text">{{products.hands['Лосьон для рук Карите'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на чистую сухую кожу рук и/или тела мягкими массирующими движениями.</div>
+                        <div class="about-text-text">{{products.hands['Лосьон для рук Карите'].advice}}</div>
                     </div>
                 </div>
             </div>

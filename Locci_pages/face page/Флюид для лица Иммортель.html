@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Флюид для лица Драгоценный Иммортель</div>
-                    <div class="item-desc">Обогащенный уникальным комплексом, состоящим из низкомолекулярной гиалуроновой кислоты и минерала кремния, легкий флюид предотвращает первые ...</div>
+                    <div class="item-title">{{products.face['Флюид для лица Драгоценный Иммортель'].name}}</div>
+                    <div class="item-desc">{{products.face['Флюид для лица Драгоценный Иммортель'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Флюид для лица Иммортель.webp">
+                <img :src="products.face['Флюид для лица Драгоценный Иммортель'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,14 +47,11 @@
                     <img src="../../img/CO_Co_Immortelle.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Обогащенный уникальным комплексом, состоящим из низкомолекулярной гиалуроновой кислоты и минерала кремния, легкий флюид предотвращает первые признаки старения. 
-                            Эффективный микс этих ценных ингредиентов способствует самостоятельному синтезу молекул гиалуроновой кислоты в коже. 
-                            Флюид насыщен микрокапсулированным маслом корсиканского иммортеля,известным своей способностью бороться с видимыми признаками старения. 
-                            Через 28 дней применения кожа становится светящейся, увлажненной и подтянутой.</div>
+                        <div class="about-text-text">{{products.face['Флюид для лица Драгоценный Иммортель'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить утром и вечером на кожу лица и шеи легкими массажными движениями, избегая область вокруг глаз.</div>
+                        <div class="about-text-text">{{products.face['Флюид для лица Драгоценный Иммортель'].advice}}</div>
                     </div>
                 </div>
             </div>

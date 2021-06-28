@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">SOS-маска для волос Сияние</div>
-                    <div class="item-desc">Вашим волосам нужен экспресс-уход для сияния? Обогащенная 5 эфирными маслами, экстрактом лимона и сахарного тростника, маска мгновенно смягчает ...</div>
+                    <div class="item-title">{{products.hair['SOS-маска для волос Сияние'].name}}</div>
+                    <div class="item-desc">{{products.hair['SOS-маска для волос Сияние'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hair/SOS-маска для волос Сияние.webp">
+                <img :src="products.hair['SOS-маска для волос Сияние'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Aromachologie.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Вашим волосам нужен экспресс-уход для сияния? Обогащенная 5 эфирными маслами, экстрактом лимона и 
-                            сахарного тростника, маска мгновенно смягчает волосы и придает им ослепительный блеск.</div>
+                        <div class="about-text-text">{{products.hair['SOS-маска для волос Сияние'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите на всю длину волос и кончики, оставьте на 5 минут, тщательно смойте водой</div>
+                        <div class="about-text-text">{{products.hair['SOS-маска для волос Сияние'].advice}}</div>
                     </div>
                 </div>
             </div>

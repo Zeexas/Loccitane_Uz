@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Очищающий гель для умывания Можжевельник для мужчин</div>
-                    <div class="item-desc">Отшелушивающий гель,обогащенный эфирным маслом можжевельника, а также перемолотой скорлупой ...</div>
+                    <div class="item-title">{{products.men['Очищающий гель для умывания Можжевельник для мужчин'].name}}</div>
+                    <div class="item-desc">{{products.men['Очищающий гель для умывания Можжевельник для мужчин'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Гель для умывания очищающий Cade.webp">
+                <img :src="products.men['Очищающий гель для умывания Можжевельник для мужчин'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Cade.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Отшелушивающий гель,обогащенный эфирным маслом можжевельника, а также перемолотой скорлупой каштана и миндаля, 
-                            бережно очищает и эксфолиирует кожу,удаляет омертвевшие клетки,убирает жирный блеск.
-                            Подходит для всех типов кожи и ежедневного применения. Формула разработана специально для мужчин и протестирована дерматологами.</div>
+                        <div class="about-text-text">{{products.men['Очищающий гель для умывания Можжевельник для мужчин'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на влажную кожу массажными движениями, уделяя особое внимание лбу, носу и подбородку. Смыть водой.</div>
+                        <div class="about-text-text">{{products.men['Очищающий гель для умывания Можжевельник для мужчин'].advice}}</div>
                     </div>
                 </div>
             </div>

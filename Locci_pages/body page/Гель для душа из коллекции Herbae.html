@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Гель для душа Herbae</div>
-                    <div class="item-desc">Гель для душа Herbae обогащен натуральными растительными экстрактами. Он деликатно очищает, придавая коже освежающий аромат диких трав и цветов ...</div>
+                    <div class="item-title">{{products.body['Гель для душа Herbae'].name}}</div>
+                    <div class="item-desc">{{products.body['Гель для душа Herbae'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/body/Гель для душа из коллекции Herbae.webp">
+                <img :src="products.body['Гель для душа Herbae'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Herbae.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Гель для душа Herbae обогащен натуральными растительными экстрактами.
-                            Он деликатно очищает, придавая коже освежающий аромат диких трав и цветов, который останется на Вашей коже легким шлейфом.</div>
+                        <div class="about-text-text">{{products.body['Гель для душа Herbae'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите гель для душа на влажную кожу, помассируйте мягкими движениями и смойте теплой водой.
-                            Подходит для ежедневного ухода.</div>
+                        <div class="about-text-text">{{products.body['Гель для душа Herbae'].advice}}</div>
                     </div>
                 </div>
             </div>

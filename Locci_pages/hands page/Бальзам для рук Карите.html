@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Питательный бальзам для рук Карите</div>
-                    <div class="item-desc">Благодаря чудодейственному маслу Карите (25%) и аллантоину бальзам бережно заботится о коже рук, питая и успокаивая поврежденную ...</div>
+                    <div class="item-title">{{products.hands['Питательный бальзам для рук Карите'].name}}</div>
+                    <div class="item-desc">{{products.hands['Питательный бальзам для рук Карите'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hands/Бальзам для рук Карите.webp">
+                <img :src="products.hands['Питательный бальзам для рук Карите'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Благодаря чудодейственному маслу Карите (25%) и аллантоину бальзам бережно заботится о коже рук, питая и успокаивая поврежденную кожу.
-                            Ежедневное использование бальзама восстанавливает защитный барьер кожи и предотвращает появление ощущения сухости.
-                            При регулярном применении отмечается интенсивное восстановление очень сухой обезвоженной кожи рук.</div>
+                        <div class="about-text-text">{{products.hands['Питательный бальзам для рук Карите'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на чистую сухую кожу рук по мере необходимости.</div>
+                        <div class="about-text-text">{{products.hands['Питательный бальзам для рук Карите'].advice}}</div>
                     </div>
                 </div>
             </div>

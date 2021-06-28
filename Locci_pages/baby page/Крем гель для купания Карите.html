@@ -27,12 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Крем-гель для купания 2в1 Карите-Малыш</div>
-                    <div class="item-desc">Кремовая обволакивающая текстура крем-геля дарит малышу ощущения мягкости и комфорта во время купания.<br>
-                        Крем-гель предназначен для ...</div>
+                    <div class="item-title">{{products.baby['Крем-гель для купания 2в1 Карите-Малыш'].name}}</div>
+                    <div class="item-desc">{{products.baby['Крем-гель для купания 2в1 Карите-Малыш'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/baby/Крем-гель для купания 2в1 Карите.webp">
+                <img :src="products.baby['Крем-гель для купания 2в1 Карите-Малыш'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -48,13 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Кремовая обволакивающая текстура крем-геля дарит малышу ощущения мягкости и комфорта во время купания.
-                            Крем-гель предназначен для деликатного очищения нежной кожи ребенка, а также волос и кожи головы.
-                            Рекомендуется использовать для детей старше 3-х месяцев.</div>
+                        <div class="about-text-text">{{products.baby['Крем-гель для купания 2в1 Карите-Малыш'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите на влажные тело и волосы массирующими движениями, вспеньте, тщательно смойте и промокните насухо.</div>
+                        <div class="about-text-text">{{products.baby['Крем-гель для купания 2в1 Карите-Малыш'].advice}}</div>
                     </div>
                 </div>
             </div>

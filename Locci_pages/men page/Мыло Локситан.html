@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Мыло Л'Окситан, твердое</div>
-                    <div class="item-desc">Мыло бережно очищает кожу рук и тела, оставляя на ней яркий перечный аромат с нотой мускатного ореха.</div>
+                    <div class="item-title">{{products.men[`Мыло Л'Окситан, твердое`].name}}</div>
+                    <div class="item-desc">{{products.men[`Мыло Л'Окситан, твердое`].desc}}</div>
                 <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Мыло Локситан.webp">
+                <img :src="products.men[`Мыло Л'Окситан, твердое`].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,11 +47,11 @@
                     <img src="../../img/CO_Co_Occitan.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Мыло бережно очищает кожу рук и тела, оставляя на ней яркий перечный аромат с нотой мускатного ореха.</div>
+                        <div class="about-text-text">{{products.men[`Мыло Л'Окситан, твердое`].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Вспеньте и нанесите на влажную кожу рук и тела. Тщательно смойте водой.</div>
+                        <div class="about-text-text">{{products.men[`Мыло Л'Окситан, твердое`].advice}}</div>
                     </div>
                 </div>
             </div>

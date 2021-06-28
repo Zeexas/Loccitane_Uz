@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Ультраувлажняющая минеральная маска для лица Аква Реотье</div>
-                    <div class="item-desc">Ультраувлажняющая маска содержит минеральную воду из источника Реотье, гиалуроновую кислоту и удерживающие воду молекулы для интенсивного ...</div>
+                    <div class="item-title">{{products.face['Ультраувлажняющая минеральная маска для лица Аква Реотье'].name}}</div>
+                    <div class="item-desc">{{products.face['Ультраувлажняющая минеральная маска для лица Аква Реотье'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Ультраувлажняющая минеральная маска для лица Аква Реотье.webp">
+                <img :src="products.face['Ультраувлажняющая минеральная маска для лица Аква Реотье'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Reotier.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Ультраувлажняющая маска содержит минеральную воду из источника Реотье, гиалуроновую кислоту и удерживающие воду молекулы для интенсивного восстановления водного баланса. 
-                            Маска мгновенно пробуждает кожу, делая ее сияющей и отдохнувшей, помогает сузить поры.</div>
+                        <div class="about-text-text">{{products.face['Ультраувлажняющая минеральная маска для лица Аква Реотье'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Для моментального эффекта нанести толстым слоем на чистую кожу лица, оставить на 10 минут, остатки удалить ватным диском. 
-                            Для глубокого увлажнения нанести тонким слоем в качестве вечернего ухода и оставить на всю ночь.</div>
+                        <div class="about-text-text">{{products.face['Ультраувлажняющая минеральная маска для лица Аква Реотье'].advice}}</div>
                     </div>
                 </div>
             </div>

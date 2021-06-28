@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Скраб для губ Фруктовый нектар, мандарин</div>
-                    <div class="item-desc">Скраб для губ обладает текстурой настоящего бодрящего цитрусового варенья. Он отлично отшелушивает благодаря перемолотой скорлупе грецкого ореха ...</div>
+                    <div class="item-title">{{products.makeup["Скраб для губ Фруктовый нектар, мандарин"].name}}</div>
+                    <div class="item-desc">{{products.makeup["Скраб для губ Фруктовый нектар, мандарин"].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/makeup/Скраб для губ Фруктовый Нектар, мандарин.webp">
+                <img :src="products.makeup['Скраб для губ Фруктовый нектар, мандарин'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Make-up_Mask.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Скраб для губ обладает текстурой настоящего бодрящего цитрусового варенья.
-                            Он отлично отшелушивает благодаря перемолотой скорлупе грецкого ореха, делая губы мягкими после первого применения.
-                            Натуральные фруктовые экстракты не только дарят чудесный аромат,но и интенсивно питают кожу губ.</div>
+                        <div class="about-text-text">{{products.makeup["Скраб для губ Фруктовый нектар, мандарин"].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанести на чистую сухую кожу губ, помассировать, смыть теплой водой.</div>
+                        <div class="about-text-text">{{products.makeup["Скраб для губ Фруктовый нектар, мандарин"].advice}}</div>
                     </div>
                 </div>
             </div>

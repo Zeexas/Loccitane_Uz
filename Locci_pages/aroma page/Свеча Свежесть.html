@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Свеча «Свежесть»</div>
-                    <div class="item-desc">Дыхание свежего воздуха! Вдохните и представьте ощущение свободы. То же впечатление, которое вы испытываете, прогуливаясь по провансальским ...</div>
+                    <div class="item-title">{{products.aroma_home['Свеча «Свежесть»'].name}}</div>
+                    <div class="item-desc">{{products.aroma_home['Свеча «Свежесть»'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Свеча Ароматическая свежесть.webp">
+                <img :src="products.aroma_home['Свеча «Свежесть»'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_New_Home.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Дыхание свежего воздуха! Вдохните и представьте ощущение свободы.
-                            То же впечатление, которое вы испытываете, прогуливаясь по провансальским скалам, которые устилают Средиземное море, когда свежий ветер поднимается от океана и развевается над землей.
-                            L'Occitane запечатлел это бодрящее дуновение в свече, сочетающей эфирные масла мяты, сосны, розмарина, сладкого апельсина, дарящей вам чувство благополучия и жизненной силы.</div>
+                        <div class="about-text-text">{{products.aroma_home['Свеча «Свежесть»'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Зажгите фитиль и насладитесь ароматом. Соблюдайте меры предосторожности.</div>
+                        <div class="about-text-text">{{products.aroma_home['Свеча «Свежесть»'].advice}}</div>
                     </div>
                 </div>
             </div>

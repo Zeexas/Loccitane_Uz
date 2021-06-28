@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Легкий крем-комфорт для лица Карите SPF15</div>
-                    <div class="item-desc">Легкий крем-комфорт для лица Карите, обогащенный чудодейственным маслом карите (5%), превосходно питает, увлажняет и восстанавливает кожу. Уникальная ...</div>
+                    <div class="item-title">{{products.face['Легкий крем-комфорт для лица Карите SPF15'].name}}</div>
+                    <div class="item-desc">{{products.face['Легкий крем-комфорт для лица Карите SPF15'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/face/Легкий крем для лица Карите SPF15.webp">
+                <img :src="products.face['Легкий крем-комфорт для лица Карите SPF15'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_SheaButter.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Легкий крем-комфорт для лица Карите, обогащенный чудодейственным маслом карите (5%), превосходно питает, увлажняет и восстанавливает кожу. 
-                            Уникальная формула крема удовлетворяет потребности различных типов кожи и обеспечивает защиту в любых условиях. 
-                            Крем содержит SPF15, благодаря чему эффективно защищает от ультрафиолетовых лучей. Дарит ощущение мягкости, бархатистости и увлажнения в течение 48 часов.</div>
+                        <div class="about-text-text">{{products.face['Легкий крем-комфорт для лица Карите SPF15'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносите утром на очищенную кожу лица легкими поглаживающими движениями.</div>
+                        <div class="about-text-text">{{products.face['Легкий крем-комфорт для лица Карите SPF15'].advice}}</div>
                     </div>
                 </div>
             </div>

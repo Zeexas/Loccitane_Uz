@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Туалетная вода Жасмин-Иммортель-Нероли</div>
-                    <div class="item-desc">Когда жасмин, иммортель и нероли соединяются воедино... Гармония, полная контрастов, - от изысканной легкости до выразительной интенсивности ...</div>
+                    <div class="item-title">{{products.aroma_her['Туалетная вода Жасмин-Иммортель-Нероли'].name}}</div>
+                    <div class="item-desc">{{products.aroma_her['Туалетная вода Жасмин-Иммортель-Нероли'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Туалетная вода Жасмин-Иммортель-Нероли.webp">
+                <img :src="products.aroma_her['Туалетная вода Жасмин-Иммортель-Нероли'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,13 +47,11 @@
                     <img src="../../img/CO_Co_Jas_Im_Ne.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Когда жасмин, иммортель и нероли соединяются воедино... Гармония, полная контрастов, - от изысканной легкости до выразительной интенсивности.
-                            Свежее и нежное нероли выражается в неотразимой легкости, освещенной теплым и ярким иммортелем из Корсики.
-                            В сопровождении шелковистого жасмина рождается абсолютно женственный и чувственный аромат.</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная вода Жасмин-Иммортель-Нероли'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите аромат на точки пульсации (шея, запястья, декольте).</div>
+                        <div class="about-text-text">{{products.aroma_her['Туалетная вода Жасмин-Иммортель-Нероли'].advice}}</div>
                     </div>
                 </div>
             </div>

@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Помада Фруктовый Нектар, 06 Rouge Craquant</div>
-                    <div class="item-desc">Помада, обогащенная фруктовыми экстрактами и витаминами,подарит невероятный уход и пленительный стойкий цвет Вашим губам ...</div>
+                    <div class="item-title">{{products.makeup['Помада Фруктовый Нектар, 06 Rouge Craquant'].name}}</div>
+                    <div class="item-desc">{{products.makeup['Помада Фруктовый Нектар, 06 Rouge Craquant'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/makeup/Помада Фруктовый Нектар, 06 Rouge Craquant.webp">
+                <img :src="products.makeup['Помада Фруктовый Нектар, 06 Rouge Craquant'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Make-up_Mask.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Помада, обогащенная фруктовыми экстрактами и витаминами,подарит невероятный уход и пленительный стойкий цвет Вашим губам.
-                            Благодаря уникальным пигментам насыщенный оттенок роскошно подчеркнет красоту Ваших губ.</div>
+                        <div class="about-text-text">{{products.makeup['Помада Фруктовый Нектар, 06 Rouge Craquant'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на кожу губ по мере необходимости</div>
+                        <div class="about-text-text">{{products.makeup['Помада Фруктовый Нектар, 06 Rouge Craquant'].advice}}</div>
                     </div>
                 </div>
             </div>

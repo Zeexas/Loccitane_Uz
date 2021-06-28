@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Гель для ванн и душа Вербена</div>
-                    <div class="item-desc">Освежающая текстура геля смягчает и питает даже самую чувствительную кожу, а также ...</div>
+                    <div class="item-title">{{products.men['Гель для ванн и душа Вербена'].name}}</div>
+                    <div class="item-desc">{{products.men['Гель для ванн и душа Вербена'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/men/Гель для ванн и душа Вербена.webp">
+                <img :src="products.men['Гель для ванн и душа Вербена'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Verbena.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Освежающая текстура геля смягчает и питает даже самую чувствительную кожу, а также 
-                            наполняют ванную комнату дивным бодрящим ароматом Вербены в сочетании с пикантной свежестью цитрусовых.</div>
+                        <div class="about-text-text">{{products.men['Гель для ванн и душа Вербена'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Используйте как гель для душа или добавьте немного геля под струей воды для образования пышной пены.</div>
+                        <div class="about-text-text">{{products.men['Гель для ванн и душа Вербена'].advice}}</div>
                     </div>
                 </div>
             </div>

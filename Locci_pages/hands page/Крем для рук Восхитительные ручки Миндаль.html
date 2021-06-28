@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Восхитительные ручки Миндаль</div>
-                    <div class="item-desc">Питательная формула, обогащённая миндальным молочком и протеинами, восстанавливает, смягчает и разглаживает кожу рук. Лёгкая, невесомая текстура ...</div>
+                    <div class="item-title">{{products.hands['Восхитительные ручки Миндаль'].name}}</div>
+                    <div class="item-desc">{{products.hands['Восхитительные ручки Миндаль'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/hands/Крем для рук Восхитительные ручки Миндаль.webp">
+                <img :src="products.hands['Восхитительные ручки Миндаль'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_Almond.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Питательная формула, обогащённая миндальным молочком и протеинами, восстанавливает, смягчает и разглаживает кожу рук.
-                            Лёгкая, невесомая текстура мгновенно впитывается, оставляя на коже тонкий и сладкий аромат миндаля.</div>
+                        <div class="about-text-text">{{products.hands['Восхитительные ручки Миндаль'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Наносить на чистую кожу рук в течение дня по мере необходимости.</div>
+                        <div class="about-text-text">{{products.hands['Восхитительные ручки Миндаль'].advice}}</div>
                     </div>
                 </div>
             </div>

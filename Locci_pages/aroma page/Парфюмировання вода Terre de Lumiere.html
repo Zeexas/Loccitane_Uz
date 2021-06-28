@@ -27,11 +27,11 @@
         <div class="item-page">
             <div class="item-page-block-0">
                 <div class="item-page-text">
-                    <div class="item-title">Парфюмированная вода TERRE DE LUMIERE</div>
-                    <div class="item-desc">В сердце этот уникальный и интенсивный аромат раскрывается благодаря ноткам лавандового меда. А окутывают его бергамот и миндаль!</div>
+                    <div class="item-title">{{products.aroma_her['Парфюмированная вода TERRE DE LUMIERE'].name}}</div>
+                    <div class="item-desc">{{products.aroma_her['Парфюмированная вода TERRE DE LUMIERE'].desc}}</div>
                     <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
                 </div>
-                <img src="../../img/aroma/Парфюмировання вода Terre de Lumiere.webp">
+                <img :src="products.aroma_her['Парфюмированная вода TERRE DE LUMIERE'].img">
             </div>
     
             <i id="desc-anchor"></i>
@@ -47,12 +47,11 @@
                     <img src="../../img/CO_Co_TDL.webp">
                     <div class="about-text about-text-1">
                         <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">Золотой час, воспетый фотографами, воплощён в изысканном аромате для истинных любителей Прованса.
-                            Аромат разогретой на солнце лаванды и мёда, обогащён горьковатыми нотами миндаля, освещён мягким закатным светом перца и бергамота и укутан кашемировым облаком мускуса.</div>
+                        <div class="about-text-text">{{products.aroma_her['Парфюмированная вода TERRE DE LUMIERE'].description}}</div>
                     </div>
                     <div class="about-text about-text-2">
                         <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">Нанесите аромат на точки пульсации (шея, запястья, декольте).</div>
+                        <div class="about-text-text">{{products.aroma_her['Парфюмированная вода TERRE DE LUMIERE'].advice}}</div>
                     </div>
                 </div>
             </div>
