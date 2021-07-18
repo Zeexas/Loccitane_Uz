@@ -15,25 +15,19 @@
 </head>
 <body>
     
-    <div id="app" v-cloak>
+    <div id="app">
         
         <header id="header" class="header">
             <div class="header-top-border"></div>
             <div class="header-wrapper">
                 <div class="header-area-wrapper">
-                    <div class="header-area-left header-left-right">
-                        <div class="search-area" ref="search_area">
-                            <input class="searchfield" type="text" ref="search_value"
-                            @input="search_input" v-model="search" placeholder="Поиск">
-                            <button class="search-icon circle" ref="circle" @click="search_do">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="search-icon cross" ref="cross" @click="search_clear">
-                                <i class="fas fa-times"></i>
-                            </button>
+                    <div class="header-area-left">
+                        <div class="search-area">
+                            <input class="searchfield" type="text" v-model="search" placeholder="Поиск">
+                            <button class="search-icon"><i class="fas fa-search"></i></button>
                         </div>
                         <a href="#contacts" class="header-shops">
-                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <span class="header-shops-text">МАГАЗИНЫ</span>
                             <img src="img/map_marker.png" class="map-marker">
                         </a>
                     </div>
@@ -44,20 +38,9 @@
                             </a>
                         </div>
                     </div>
-
-                    
-                    <div class="header-area-right header-left-right">
-                        <a href="Loccitane_Uz_cart.html" class="header-cart">
-                            <div class="cart">МОЯ КОРЗИНА</div>
-                            <div class="cart-icon">
-                                <div class="in-cart" v-if="cart.length > 0">
-                                    <p>{{ cart.length }}</p>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="header-area-right">
+                        
                     </div>
-
-                    
                 </div>
                 <nav id="main-nav" class="m-nav">
                     <ul class="m-dropdown"> 
@@ -258,8 +241,9 @@
     
     
         <div class="main">
-            
-            <div class="search-module" ref="show_me">
+                
+            <div class="module-search">
+                
                 <div class="module-content">
                     <a v-for="item in filteredList" class="product-hover" :href="item.url_1">
                         <div class="module-content-block">
@@ -269,91 +253,10 @@
                         </div>
                     </a>
                 </div>
-            </div>
-
-            <div ref="hide_me">
-                <div class="module-0 main-slider">
-                    <input type="radio" id="radio-1" name="slider" class="slider-bar" checked>
-                    <label for="radio-1" class="slide-button"></label>
-                    <input type="radio" id="radio-2" name="slider" class="slider-bar">
-                    <label for="radio-2" class="slide-button"></label>
-                    <input type="radio" id="radio-3" name="slider" class="slider-bar">
-                    <label for="radio-3" class="slide-button"></label>
-                    <div class="main-pic-slides">
-                        <div class="pic-slide">
-                            <img src="img/Reine_Blanche.webp" class="main-pic">
-                            <div class="poster-inblock">
-                                <div class="poster-content">
-                                    <div class="poster-content-big">КРАСОТА И ЗДОРОВОЕ СИЯНИЕ КОЖИ</div>
-                                    <div class="poster-content-small">Обновленная линия Белая королева</div>
-                                    <a href="#"><div class="know-more-btn">REINE BLANCHE</div></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pic-slide">
-                            <img src="img/Spring_presents.webp" class="main-pic">
-                            <div class="poster-inblock">
-                                <div class="poster-content">
-                                    <div class="poster-content-big">ВЕСЕННЯЯ КОЛЛЕКЦИЯ ПОДАРКОВ</div>
-                                    <div class="poster-content-small">Изысканная упаковка и волнующие ароматы</div>
-                                    <div class="know-more-btn">ВАШИ ПОДАРКИ</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pic-slide">
-                            <img src="img/Karite_new.webp" class="main-pic">
-                            <div class="poster-inblock">
-                                <div class="poster-content">
-                                    <div class="poster-content-big">СЧАСТЛИВАЯ КОЛЛЕКЦИЯ</div>
-                                    <div class="poster-content-small">Новинки Карите для хорошего настроения и защиты кожи</div>
-                                    <div class="know-more-btn">СЕРИЯ КАРИТЕ</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="module-1">
-                    <h2 class="module-1_title">Лучшее для ухода за руками</h2>
-                    <div class="module-1_slider">
-                        
-                        <div class="module-content">
-                            <a class="product-hover" v-for="prod in products" v-if="prod.type == 'hands' && prod.recommend == 'yes'" :href="prod.url_1">
-                                <div class="module-content-block">
-                                    <img class="block-img" :src="prod.img_1">
-                                    <div class="block-name">{{ prod.name }}</div>
-                                    <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-        
-                
-                <div class="module-2">
-                    <div class="osmantus-poster">
-                        <img src="img/Османтус постер.webp" class="module-2-img">
-                        <div class="poster-inblock">
-                            <div class="poster-content">
-                                <div class="poster-content-big">ОСМАНТУС - НОВЫЙ<br>АРОМАТ</div>
-                                <div class="poster-content-small">Букет желтых цветов в бархатных объятиях абрикоса</div>
-                                <div class="know-more-btn">OSMANTHUS</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="last-module">
-                <div class="last-module-news">
-                    <div class="last-module-news-title">Узнавайте первыми о новинках и специальных акциях!</div>
-                    <a href="https://t.me/loccitaneuz_bot" target="_blanc"><div class="last-module-news-text">t.me/loccitaneuz_bot</div></a>
-                </div>
+                    
             </div>
     
+            
    
             <contacts-template></contacts-template>
     

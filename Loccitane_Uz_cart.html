@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натуральная французская косметика</title>
+    <link rel="icon" href="img/loccitane.png">
+    <link rel="stylesheet" href="Loccitane_Uz_style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="hover_intent.js"></script>
+</head>
+<body>
+    
+    <div id="app" v-cloak>
+        
+        <header id="header" class="-cart">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left header-left-right"></div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image-cart" src="img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right"></div>
+                </div>
+            </div>
+            
+        </header>
+    
+        <div class="main">
+
+            <div class="module-1">
+                <h2 class="module-1_title">Ваша корзина покупок</h2>
+                <div class="empty-cart-text" v-if="cart.length === 0">
+                    <img src="img/shopping-bag.svg" alt="shopping-bag">
+                    Ваша корзина пуста
+                </div>
+
+                <div class="module-1_slider">
+                    
+                    <table class="cart-table" v-if="cart.length > 0">
+                        <thead>
+                            <tr>
+                                <th class="col-1">Продукт</th>
+                                <th class="col-2">Описание товара</th>
+                                <th class="col-3">Цена</th>
+                                <th class="col-4">Кол-во</th>
+                                <th class="col-5">Итого</th>
+                                <th class="col-6 item-remove removeColumn">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in filteredCart">
+                                <td class="col-1">
+                                    <a :href="item.url_1"><img class="cart-img" :src="item.img_1" alt=""></a>
+                                </td>
+                                <td class="col-2">
+                                    <a :href="item.url_1">{{item.name}}</a>
+                                </td>
+                                <td class="col-3">
+                                    
+                                </td>
+                                <td class="col-4">
+                                    <div>
+                                        <select @change="select_item(item, $event)">
+                                            <option v-for="num in select" 
+                                            :value="num"
+                                            :selected="count_cart(item) > 10 ? 10 : num == count_cart(item)"
+                                            >{{num}}</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="col-5">
+                                    <!-- {{count_cart(item)}} -->
+                                </td>
+                                <td class="col-6">
+                                    <div class="remove-item">
+                                        <img src="img/cross_icon.png" alt="cross_icon"
+                                        @click="removeFromCart(item)">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                </div>
+
+                <div class="module-2" v-if="cart.length === 0">
+                    <div class="cart-poster">
+                        <img src="img/cart_img.jpg" alt="cart-poster">
+                    </div>
+                </div>
+                <div class="empty-cart-desc">
+                    L’OCCITANE ( Л’ОКСИТАН) – натуральная косметика и парфюмерия из Прованса – места, где жизнь течет неторопливо,
+                     где природа готова дарить все лучшее для Вашего душевного и физического комфорта. 
+                     Вот уже более 40 лет мы приобщаем своих клиентов к Art De Vivre – особому искусству жизни в гармонии с природой. 
+                     Предлагаем вам познакомиться с любимыми средствами наших клиентов.
+                </div>
+                <a href="Loccitane_Uz.html">
+                    <button class="cart-button">
+                        Продолжить покупки
+                    </button>
+                </a>
+            </div>
+        
+            
+            
+            
+            <div class="last-module">
+                <div class="last-module-news">
+                    <div class="last-module-news-title">Узнавайте первыми о новинках и специальных акциях!</div>
+                    <a href="https://t.me/loccitaneuz_bot" target="_blanc"><div class="last-module-news-text">t.me/loccitaneuz_bot</div></a>
+                </div>
+            </div>
+    
+   
+            <contacts-template></contacts-template>
+    
+            <div class="footer">
+                <div class="footer-content">
+                    <img src="img/logo.svg" class="logo-footer">
+                    <div class="footer-text">НАТУРАЛЬНАЯ ФРАНЦУЗСКАЯ КОСМЕТИКА L'OCCITANE EN PROVENCE</div>
+                    <div class="footer-text">ДАННЫЙ САЙТ НОСИТ ИНФОРМАТИВНЫЙ ХАРАКТЕР.
+                        АКТУАЛЬНЫЕ СВЕДЕНИЯ ДОСТУПНЫ НА ОФИЦИАЛЬНОМ ТЕЛЕГРАМ-КАНАЛЕ <a href="https://t.me/loccitaneuz_bot" target="_blanc" class="social-link">t.me/loccitaneuz_bot</a></div>
+                </div>
+            </div>
+
+        </div>
+    
+
+    </div>   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="Loccitane_Uz_script.js"></script>
+    
+
+</body>
+</html>

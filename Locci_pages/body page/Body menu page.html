@@ -15,9 +15,52 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-        <header-template-2></header-template-2>
+        <header id="header" class="header">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left">
+                        <div class="search-area" ref="search_area">
+                            <input class="searchfield" type="text" ref="search_value"
+                            @input="search_input" v-model="search" placeholder="Поиск">
+                            <button class="search-icon circle" ref="circle" @click="search_do">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="search-icon cross" ref="cross" @click="search_clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <a href="#contacts" class="header-shops">
+                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <img src="../../img/map_marker.png" class="map-marker">
+                        </a>
+                    </div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="../../Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image" src="../../img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right">
+                        <a href="../../Loccitane_Uz_cart.html" class="header-cart">
+                            <div class="cart">МОЯ КОРЗИНА</div>
+                            <div class="cart-icon">
+                                <div class="in-cart" v-if="cart.length > 0">
+                                    <p>{{ cart.length }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <header-nav-template-2></header-nav-template-2>
+
+            </div>
+            
+        </header>
     
         <div class="m-banner">
             <a href="https://t.me/loccitaneuz_bot" target="_blanc"><span class="m-banner-text">Следите за новинками на телеграм-канале t.me/loccitaneuz_bot</span></a>
@@ -25,118 +68,69 @@
     
     
         <div class="menu-page-main">
-            <div class="menu-page-poster">
-                <img src="../../img//body/Body menu poster.webp">
-                <div class="page-poster-inblock-back">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <li>Гель & Масло для душа</li>
-                                <li>Пена для ванны</li>
-                                <li>Подтягивающее масло</li>
-                                <li>Скрабы для тела</li>
-                                <li>Крем для тела</li>
-                                <li>Расслабляющее масло</li>
-                            </ul>
+            <div class="search-module" ref="show_me">
+                <div class="module-content">
+                    <a v-for="item in filteredList" class="product-hover" :href="item.url">
+                        <div class="module-content-block">
+                            <img class="block-img" :src="item.img">
+                            <div class="block-name">{{item.name}}</div>
+                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
                         </div>
-                    </div>
-                </div>
-                <div class="page-poster-inblock">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <li>Гель & Масло для душа</li>
-                                <li>Пена для ванны</li>
-                                <li>Подтягивающее масло</li>
-                                <li>Скрабы для тела</li>
-                                <li>Крем для тела</li>
-                                <li>Расслабляющее масло</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="poster-ribbon">
-                    <div class="ribbon-big">ДЛЯ ТЕЛА</div>
-                    <div class="ribbon-small">L'OCCITANE предлагает линию средств для тела и ванны, которые перенесут Вас в Прованс. 
-                        Изготовленные из натуральных компонентов, они очищают кожу, расслабляют тело и восстанавливают душевное равновесие.</div>
+                    </a>
                 </div>
             </div>
-        
-            <div class="page-module">
-                <h2 class="module-title">Рекомендуемые продукты</h2>
-                <div class="module-content">
-                    <a class="product-hover" href="Паста-скраб для тела Миндальная.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Паста-скраб для тела Миндальная.webp">
-                            <div class="block-name">Паста-скраб для тела Миндальная</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+
+            <div ref="hide_me">
+                <div class="menu-page-poster">
+                    <img src="../../img//body/Body menu poster.webp">
+                    <div class="page-poster-inblock-back">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <li>Гель & Масло для душа</li>
+                                    <li>Пена для ванны</li>
+                                    <li>Подтягивающее масло</li>
+                                    <li>Скрабы для тела</li>
+                                    <li>Крем для тела</li>
+                                    <li>Расслабляющее масло</li>
+                                </ul>
+                            </div>
                         </div>
-                    </a>
-                    <a class="product-hover" href="Масло для душа Миндаль.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Масло для душа Миндаль.webp">
-                            <div class="block-name">Масло для душа Миндаль</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                    </div>
+                    <div class="page-poster-inblock">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <li>Гель & Масло для душа</li>
+                                    <li>Пена для ванны</li>
+                                    <li>Подтягивающее масло</li>
+                                    <li>Скрабы для тела</li>
+                                    <li>Крем для тела</li>
+                                    <li>Расслабляющее масло</li>
+                                </ul>
+                            </div>
                         </div>
-                    </a>
-                    <a class="product-hover" href="../body page/Гель для душа из коллекции Herbae.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Гель для душа из коллекции Herbae.webp">
-                            <div class="block-name">Гель для душа Herbae</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Соль-скраб для тела Вербена.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Соль-скраб для тела Вербена.webp">
-                            <div class="block-name">Соль-скраб для тела Вербена</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Скраб-мюсли для тела Миндаль.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Скраб-мюсли для тела Миндаль.webp">
-                            <div class="block-name">Скраб-мюсли для тела Миндаль</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Смягчающее масло для тела Миндаль.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Смягчающее масло для тела Миндаль.webp">
-                            <div class="block-name">Смягчающее масло для тела Миндаль</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Крем для тела Карите, лимитированная коллекция.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Крем для тела Карите, лимитированная коллекция.webp">
-                            <div class="block-name">Крем для тела Карите, лимитированная коллекция</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Крем для тела Медовый фестиваль.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Крем для тела Медовый фестиваль.webp">
-                            <div class="block-name">Крем для тела Медовый фестиваль</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="../body page/Масло для массажа Моменты безмятежности.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Масло для массажа Моменты безмятежности.webp">
-                            <div class="block-name">Масло для массажа Моменты безмятежности</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Молочко для тела Herbae L'EAU.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/body/Молочко для тела Herbae L'EAU.webp">
-                            <div class="block-name">Молочко для тела Herbae L'EAU</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
+                    </div>
+                    <div class="poster-ribbon">
+                        <div class="ribbon-big">ДЛЯ ТЕЛА</div>
+                        <div class="ribbon-small">L'OCCITANE предлагает линию средств для тела и ванны, которые перенесут Вас в Прованс. 
+                            Изготовленные из натуральных компонентов, они очищают кожу, расслабляют тело и восстанавливают душевное равновесие.</div>
+                    </div>
+                </div>
+            
+                <div class="page-module">
+                    <h2 class="module-title">Рекомендуемые продукты</h2>
+                    <div class="module-content">
+                        <a class="product-hover" v-for="prod in products" v-if="prod.type=='body' && prod.recommend=='yes'" :href="prod.url">
+                            <div class="module-content-block">
+                                <img class="block-img" :src="prod.img">
+                                <div class="block-name">{{ prod.name }}</div>
+                                <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
     

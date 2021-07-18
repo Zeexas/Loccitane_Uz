@@ -15,9 +15,52 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-        <header-template-2></header-template-2>
+        <header id="header" class="header">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left">
+                        <div class="search-area" ref="search_area">
+                            <input class="searchfield" type="text" ref="search_value"
+                            @input="search_input" v-model="search" placeholder="Поиск">
+                            <button class="search-icon circle" ref="circle" @click="search_do">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="search-icon cross" ref="cross" @click="search_clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <a href="#contacts" class="header-shops">
+                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <img src="../../img/map_marker.png" class="map-marker">
+                        </a>
+                    </div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="../../Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image" src="../../img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right">
+                        <a href="../../Loccitane_Uz_cart.html" class="header-cart">
+                            <div class="cart">МОЯ КОРЗИНА</div>
+                            <div class="cart-icon">
+                                <div class="in-cart" v-if="cart.length > 0">
+                                    <p>{{ cart.length }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <header-nav-template-2></header-nav-template-2>
+
+            </div>
+            
+        </header>
     
         <div class="m-banner">
             <a href="https://t.me/loccitaneuz_bot" target="_blanc"><span class="m-banner-text">Следите за новинками на телеграм-канале t.me/loccitaneuz_bot</span></a>
@@ -25,100 +68,72 @@
     
     
         <div class="menu-page-main">
-            <div class="menu-page-poster">
-                <img src="../../img/hair/Hair menu poster.webp">
-                <div class="page-poster-inblock-back">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <li>Восстановление</li>
-                                <li>Сила и густота</li>
-                                <li>Термозащита</li>
-                                <li>Питание</li>
-                                <li>Свежесть</li>
-                                <li>Баланс и деликатный уход</li>
-                                <li>Дополнительный уход</li>
-                            </ul>
+            <div class="search-module" ref="show_me">
+                <div class="module-content">
+                    <a v-for="item in filteredList" class="product-hover" :href="item.url">
+                        <div class="module-content-block">
+                            <img class="block-img" :src="item.img">
+                            <div class="block-name">{{item.name}}</div>
+                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
                         </div>
-                    </div>
-                </div>
-                <div class="page-poster-inblock">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <li>Восстановление</li>
-                                <li>Сила и густота</li>
-                                <li>Термозащита</li>
-                                <li>Питание</li>
-                                <li>Свежесть</li>
-                                <li>Баланс и деликатный уход</li>
-                                <li>Дополнительный уход</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="poster-ribbon">
-                    <div class="ribbon-big">ДЛЯ ВОЛОС</div>
-                    <div class="ribbon-small">Красивые волосы нуждаются в защите, питании и восстановлении. 
-                        Ухаживайте за своими волосами с помощью наших питательных и защитных средств, препятствующих неблагоприятному воздействию внешних факторов. 
-                        Откройте для себя маски, сыворотки и другие средства, которые подарят вашим локонам восхитительное сияние Прованса.</div>
+                    </a>
                 </div>
             </div>
-        
-            <div class="page-module">
-                <h2 class="module-title">Для ухода за волосами</h2>
-                <div class="module-content">
-                    <a class="product-hover" href="Нежный кондиционер для волос Миндаль.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/hair/Нежный кондиционер для волос Миндаль.webp">
-                            <div class="block-name">Нежный кондиционер для волос Миндаль</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+
+            <div ref="hide_me">
+                <div class="menu-page-poster">
+                    <img src="../../img/hair/Hair menu poster.webp">
+                    <div class="page-poster-inblock-back">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <li>Восстановление</li>
+                                    <li>Сила и густота</li>
+                                    <li>Термозащита</li>
+                                    <li>Питание</li>
+                                    <li>Свежесть</li>
+                                    <li>Баланс и деликатный уход</li>
+                                    <li>Дополнительный уход</li>
+                                </ul>
+                            </div>
                         </div>
-                    </a>
-                    <a class="product-hover" href="../men page/Шампунь Деликатный уход и Баланс.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Шампунь Деликатный уход и Баланс.webp">
-                            <div class="block-name">Шампунь Деликатный уход и Баланс</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                    </div>
+                    <div class="page-poster-inblock">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <li>Восстановление</li>
+                                    <li>Сила и густота</li>
+                                    <li>Термозащита</li>
+                                    <li>Питание</li>
+                                    <li>Свежесть</li>
+                                    <li>Баланс и деликатный уход</li>
+                                    <li>Дополнительный уход</li>
+                                </ul>
+                            </div>
                         </div>
-                    </a>
-                    <a class="product-hover" href="SOS-маска для волос Сияние.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/hair/SOS-маска для волос Сияние.webp">
-                            <div class="block-name">SOS-маска для волос Сияние</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="../men page/Шампунь для волос Цитрус - Вербена.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Шампунь для волос Цитрус - Вербена.webp">
-                            <div class="block-name">Шампунь для волос Цитрус - Вербена</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="../men page/Шампунь очищающий.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Шампунь очищающий.webp">
-                            <div class="block-name">Шампунь очищающий</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="SOS-маска для волос Восстановление.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/hair/SOS-маска для волос Восстановление.webp">
-                            <div class="block-name">SOS-маска для волос Восстановление</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Нежный шампунь для волос Миндаль.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/hair/Нежный шампунь для волос Миндаль.webp">
-                            <div class="block-name">Нежный шампунь для волос Миндаль</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
+                    </div>
+                    <div class="poster-ribbon">
+                        <div class="ribbon-big">ДЛЯ ВОЛОС</div>
+                        <div class="ribbon-small">Красивые волосы нуждаются в защите, питании и восстановлении. 
+                            Ухаживайте за своими волосами с помощью наших питательных и защитных средств, препятствующих неблагоприятному воздействию внешних факторов. 
+                            Откройте для себя маски, сыворотки и другие средства, которые подарят вашим локонам восхитительное сияние Прованса.</div>
+                    </div>
+                </div>
+            
+                <div class="page-module">
+                    <h2 class="module-title">Для ухода за волосами</h2>
+                    <div class="module-content">
+                        <a class="product-hover" v-for="prod in products" v-if="(prod.type=='hair' || prod.type=='men-hair') && prod.recommend=='yes'" :href="prod.url">
+                            <div class="module-content-block">
+                                <img class="block-img" :src="prod.img">
+                                <div class="block-name">{{ prod.name }}</div>
+                                <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
     

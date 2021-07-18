@@ -15,9 +15,52 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-        <header-template-2></header-template-2>
+        <header id="header" class="header">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left">
+                        <div class="search-area" ref="search_area">
+                            <input class="searchfield" type="text" ref="search_value"
+                            @input="search_input" v-model="search" placeholder="Поиск">
+                            <button class="search-icon circle" ref="circle" @click="search_do">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="search-icon cross" ref="cross" @click="search_clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <a href="#contacts" class="header-shops">
+                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <img src="../../img/map_marker.png" class="map-marker">
+                        </a>
+                    </div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="../../Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image" src="../../img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right">
+                        <a href="../../Loccitane_Uz_cart.html" class="header-cart">
+                            <div class="cart">МОЯ КОРЗИНА</div>
+                            <div class="cart-icon">
+                                <div class="in-cart" v-if="cart.length > 0">
+                                    <p>{{ cart.length }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <header-nav-template-2></header-nav-template-2>
+
+            </div>
+            
+        </header>
     
         <div class="m-banner">
             <a href="https://t.me/loccitaneuz_bot" target="_blanc"><span class="m-banner-text">Следите за новинками на телеграм-канале t.me/loccitaneuz_bot</span></a>
@@ -25,33 +68,54 @@
     
     
         <div class="item-page">
-            <div class="item-page-block-0">
-                <div class="item-page-text">
-                    <div class="item-title">{{products.men['Мыло Цедрат, твердое'].name}}</div>
-                    <div class="item-desc">{{products.men['Мыло Цедрат, твердое'].desc}}</div>
-                <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
+            <div class="search-module" ref="show_me">
+                <div class="module-content">
+                    <a v-for="item in filteredList" class="product-hover" :href="item.url">
+                        <div class="module-content-block">
+                            <img class="block-img" :src="item.img">
+                            <div class="block-name">{{item.name}}</div>
+                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                        </div>
+                    </a>
                 </div>
-                <img :src="products.men['Мыло Цедрат, твердое'].img">
             </div>
+
+            <div ref="hide_me">
+                <div v-for="(product, index) in products" :key="index"
+                v-if="product.name === `Мыло Цедрат, твердое`">
     
-            <i id="desc-anchor"></i>
-            
-            <div class="item-page-block-1">
-                <div class="about">
-                    <input type="radio" id="about-1" name="about" onclick="check()" checked>
-                    <label class="about-button" for="about-1">ОПИСАНИЕ</label>
-                    <input type="radio" id="about-2" name="about" onclick="check()">
-                    <label class="about-button" for="about-2">ПРИМЕНЕНИЕ</label>
-                </div>
-                <div class="about-img">
-                    <img src="../../img/CO_Co_Ced.webp">
-                    <div class="about-text about-text-1">
-                        <div class="about-text-title">ОПИСАНИЕ</div>
-                        <div class="about-text-text">{{products.men['Мыло Цедрат, твердое'].description}}</div>
+                    <div class="item-page-block-0">
+                        <div class="item-page-text">
+                            <div class="item-title">{{product.name}}</div>
+                            <div class="item-desc">{{product.desc}}</div>
+                            <a class="item-know-more" href="#desc-anchor">ПОДРОБНЕЕ</a>
+                        </div>
+                        <div class="item-page-prod">
+                            <img class="prod-img" :src="product.img">
+                            <div class="buy-btn" v-on:click="addToCart(product)">в корзину</div>
+                        </div>
                     </div>
-                    <div class="about-text about-text-2">
-                        <div class="about-text-title">ПРИМЕНЕНИЕ</div>
-                        <div class="about-text-text">{{products.men['Мыло Цедрат, твердое'].advice}}</div>
+            
+                    <i id="desc-anchor"></i>
+                    
+                    <div class="item-page-block-1">
+                        <div class="about">
+                            <input type="radio" id="about-1" name="about" onclick="check()" checked>
+                            <label class="about-button" for="about-1">ОПИСАНИЕ</label>
+                            <input type="radio" id="about-2" name="about" onclick="check()">
+                            <label class="about-button" for="about-2">ПРИМЕНЕНИЕ</label>
+                        </div>
+                        <div class="about-img">
+                            <img src="../../img/CO_Co_Ced.webp">
+                            <div class="about-text about-text-1">
+                                <div class="about-text-title">ОПИСАНИЕ</div>
+                                <div class="about-text-text">{{product.description}}</div>
+                            </div>
+                            <div class="about-text about-text-2">
+                                <div class="about-text-title">ПРИМЕНЕНИЕ</div>
+                                <div class="about-text-text">{{product.advice}}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

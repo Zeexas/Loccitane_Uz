@@ -15,9 +15,52 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-        <header-template-2></header-template-2>
+        <header id="header" class="header">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left">
+                        <div class="search-area" ref="search_area">
+                            <input class="searchfield" type="text" ref="search_value"
+                            @input="search_input" v-model="search" placeholder="Поиск">
+                            <button class="search-icon circle" ref="circle" @click="search_do">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="search-icon cross" ref="cross" @click="search_clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <a href="#contacts" class="header-shops">
+                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <img src="../../img/map_marker.png" class="map-marker">
+                        </a>
+                    </div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="../../Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image" src="../../img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right">
+                        <a href="../../Loccitane_Uz_cart.html" class="header-cart">
+                            <div class="cart">МОЯ КОРЗИНА</div>
+                            <div class="cart-icon">
+                                <div class="in-cart" v-if="cart.length > 0">
+                                    <p>{{ cart.length }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <header-nav-template-2></header-nav-template-2>
+
+            </div>
+            
+        </header>
     
         <div class="m-banner">
             <a href="https://t.me/loccitaneuz_bot" target="_blanc"><span class="m-banner-text">Следите за новинками на телеграм-канале t.me/loccitaneuz_bot</span></a>
@@ -25,139 +68,90 @@
     
     
         <div class="menu-page-main">
-            <div class="menu-page-poster">
-                <img src="../../img/makeup/Makeup_poster.webp">
-                
-                <div class="page-poster-inblock-back">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ВЫБЕРИТЕ ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <a href="Makeup menu Бальзамы для губ.html"><li>Бальзамы для губ</li></a>
-                                <a href="Makeup menu Скрабы для губ.html"><li>Скрабы для губ</li></a>
-                                <a href="Makeup menu Помада для губ.html"><li>Помада</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="page-poster-inblock">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ВЫБЕРИТЕ ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <a href="Makeup menu Бальзамы для губ.html"><li>Бальзамы для губ</li></a>
-                                <a href="Makeup menu Скрабы для губ.html"><li>Скрабы для губ</li></a>
-                                <a href="Makeup menu Помада для губ.html"><li>Помада</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="poster-ribbon">
-                    <div class="ribbon-big">ПОЦЕЛУЙ ПРОВАНСА НА ГУБАХ</div>
-                    <div class="ribbon-small">Вдохновением для новой линии средств для макияжа стали рынки Прованса с их удивительной атмосферой, наполненной пленительным и дразнящим благоуханием фруктов:
-                         спелой малины, сочных мандаринов, ароматного инжира.</div>
-                </div>
-            </div>
-        
-            <div class="page-module">
-                <h2 class="module-title">Рекомендуемые продукты</h2>
+            <div class="search-module" ref="show_me">
                 <div class="module-content">
-                    <a class="product-hover" href="../makeup page/Помада Фруктовый Нектар, 030 Provence Sunset.html">
+                    <a v-for="item in filteredList" class="product-hover" :href="item.url">
                         <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Помада Фруктовый Нектар, 030 Provence Sunset.webp">
-                            <div class="block-name">Помада Фруктовый Нектар, 030 Provence Sunset</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Помада Фруктовый Нектар, 06 Rouge Craquant.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Помада Фруктовый Нектар, 06 Rouge Craquant.webp">
-                            <div class="block-name">Помада Фруктовый Нектар, 06 Rouge Craquant</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Помада Фруктовый Нектар, 060 Plum Plum Girl.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Помада Фруктовый Нектар, 060 Plum Plum Girl.webp">
-                            <div class="block-name">Помада Фруктовый Нектар, 060 Plum Plum Girl</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Помада Фруктовый Нектар, 080 Provence Calling.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Помада Фруктовый Нектар, 080 Provence Calling.webp">
-                            <div class="block-name">Помада Фруктовый Нектар, 080 Provence Calling</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Бальзам для губ Вишневый Цвет.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Бальзам для губ Вишневый Цвет.webp">
-                            <div class="block-name">Бальзам для губ Вишневый Цвет</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Бальзам-стик для губ Карите.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Бальзам-стик для губ Карите.webp">
-                            <div class="block-name">Бальзам-стик для губ Карите</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Бальзам для губ 3в1 Фруктовый Нектар.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Бальзам для губ 3в1 Фруктовый Нектар.webp">
-                            <div class="block-name">Бальзам для губ 3в1 Фруктовый Нектар</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Бальзам для губ Фруктовый Нектар, 040 Gimme Mauve.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Бальзам для губ Фруктовый Нектар, 040 Gimme Mauve.webp">
-                            <div class="block-name">Бальзам для губ Фруктовый Нектар, 040 Gimme Mauve</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Скраб для губ Фруктовый Нектар, малина.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Скраб для губ Фруктовый Нектар, малина.webp">
-                            <div class="block-name">Скраб для губ Фруктовый Нектар, малина</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Скраб для губ Фруктовый Нектар, мандарин.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/makeup/Скраб для губ Фруктовый Нектар, мандарин.webp">
-                            <div class="block-name">Скраб для губ Фруктовый Нектар, мандарин</div>
+                            <img class="block-img" :src="item.img">
+                            <div class="block-name">{{item.name}}</div>
                             <div class="know-more-btn">ПОДРОБНЕЕ</div>
                         </div>
                     </a>
                 </div>
             </div>
+
+            <div ref="hide_me">
+                <div class="menu-page-poster">
+                    <img src="../../img/makeup/Makeup_poster.webp">
+                    
+                    <div class="page-poster-inblock-back">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ВЫБЕРИТЕ ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <a href="Makeup menu Бальзамы для губ.html"><li>Бальзамы для губ</li></a>
+                                    <a href="Makeup menu Скрабы для губ.html"><li>Скрабы для губ</li></a>
+                                    <a href="Makeup menu Помада для губ.html"><li>Помада</li></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-poster-inblock">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ВЫБЕРИТЕ ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <a href="Makeup menu Бальзамы для губ.html"><li>Бальзамы для губ</li></a>
+                                    <a href="Makeup menu Скрабы для губ.html"><li>Скрабы для губ</li></a>
+                                    <a href="Makeup menu Помада для губ.html"><li>Помада</li></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="poster-ribbon">
+                        <div class="ribbon-big">ПОЦЕЛУЙ ПРОВАНСА НА ГУБАХ</div>
+                        <div class="ribbon-small">Вдохновением для новой линии средств для макияжа стали рынки Прованса с их удивительной атмосферой, наполненной пленительным и дразнящим благоуханием фруктов:
+                             спелой малины, сочных мандаринов, ароматного инжира.</div>
+                    </div>
+                </div>
             
-            <div class="page-module">
-                <h2 class="module-title">Ваш ритуал для идеальных губ</h2>
-                <div class="module-content">
-                    <div class="module-content-block-makeup">
-                        <img class="block-img" src="../../img/makeup/Makeup step-1.webp">
-                        <div class="block-title">ШАГ 1.<br>ПРЕДВАРИТЕЛЬНОЕ ОТШЕЛУШИВАНИЕ</div>
-                        <div class="block-text">Скраб для сияющих, ярких губ! В состав наших трех скрабов для губ фруктовый нектар входят экстракты мандарина, инжира и малины, 
-                            благодаря которым ваши губы становятся гладкими и увлажненными. Не содержат силиконов, минеральных масел и компонентов животного происхождения.</div>
+                <div class="page-module">
+                    <h2 class="module-title">Рекомендуемые продукты</h2>
+                    <div class="module-content">
+                        <a class="product-hover" v-for="prod in products" v-if="prod.type == 'makeup' && prod.recommend == 'yes'" :href="prod.url">
+                            <div class="module-content-block">
+                                <img class="block-img" :src="prod.img">
+                                <div class="block-name">{{ prod.name }}</div>
+                                <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="module-content-block-makeup">
-                        <img class="block-img" src="../../img/makeup/Makeup step-2.webp">
-                        <div class="block-title">ШАГ 2.<br>УВЛАЖНЕНИЕ И СМЯГЧЕНИЕ</div>
-                        <div class="block-text">Представьте залитые солнцем сады Прованса — там растут богатые витаминами фрукты, на основе которых мы создали настоящее лакомство для ваших губ... 
-                            Все четыре бальзама обладают восхитительной кремовой текстурой и сочным ароматом, перед которым невозможно устоять, — вот почему так трудно выбрать из них какой-то один! 
-                            Попробуйте Многофункциональный бальзам для губ 3 в 1 и подходящий вам оттенок Бальзама для губ фруктовый нектар.</div>
-                    </div>
-                    <div class="module-content-block-makeup">
-                        <img class="block-img" src="../../img/makeup/Makeup step-3.webp">
-                        <div class="block-title">ШАГ 3.<br>НАНЕСЕНИЕ ОТТЕНКА</div>
-                        <div class="block-text">С самого первого взгляда восемь помад очаровывают своим дизайном два в одном и фруктовой сердцевиной для мгновенного увлажнения и яркости ваших губ. 
-                            Сочная палитра сливовых, вишневых и ягодных оттенков ухаживает за вашими губами и делает их просто неотразимыми! 
-                            Не содержат силиконов и компонентов животного происхождения и обеспечивают до 8 часов увлажнения.</div>
+                </div>
+                
+                <div class="page-module">
+                    <h2 class="module-title">Ваш ритуал для идеальных губ</h2>
+                    <div class="module-content">
+                        <div class="module-content-block-makeup">
+                            <img class="block-img" src="../../img/makeup/Makeup step-1.webp">
+                            <div class="block-title">ШАГ 1.<br>ПРЕДВАРИТЕЛЬНОЕ ОТШЕЛУШИВАНИЕ</div>
+                            <div class="block-text">Скраб для сияющих, ярких губ! В состав наших трех скрабов для губ фруктовый нектар входят экстракты мандарина, инжира и малины, 
+                                благодаря которым ваши губы становятся гладкими и увлажненными. Не содержат силиконов, минеральных масел и компонентов животного происхождения.</div>
+                        </div>
+                        <div class="module-content-block-makeup">
+                            <img class="block-img" src="../../img/makeup/Makeup step-2.webp">
+                            <div class="block-title">ШАГ 2.<br>УВЛАЖНЕНИЕ И СМЯГЧЕНИЕ</div>
+                            <div class="block-text">Представьте залитые солнцем сады Прованса — там растут богатые витаминами фрукты, на основе которых мы создали настоящее лакомство для ваших губ... 
+                                Все четыре бальзама обладают восхитительной кремовой текстурой и сочным ароматом, перед которым невозможно устоять, — вот почему так трудно выбрать из них какой-то один! 
+                                Попробуйте Многофункциональный бальзам для губ 3 в 1 и подходящий вам оттенок Бальзама для губ фруктовый нектар.</div>
+                        </div>
+                        <div class="module-content-block-makeup">
+                            <img class="block-img" src="../../img/makeup/Makeup step-3.webp">
+                            <div class="block-title">ШАГ 3.<br>НАНЕСЕНИЕ ОТТЕНКА</div>
+                            <div class="block-text">С самого первого взгляда восемь помад очаровывают своим дизайном два в одном и фруктовой сердцевиной для мгновенного увлажнения и яркости ваших губ. 
+                                Сочная палитра сливовых, вишневых и ягодных оттенков ухаживает за вашими губами и делает их просто неотразимыми! 
+                                Не содержат силиконов и компонентов животного происхождения и обеспечивают до 8 часов увлажнения.</div>
+                        </div>
                     </div>
                 </div>
             </div>

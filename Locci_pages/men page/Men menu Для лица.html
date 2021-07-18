@@ -15,9 +15,52 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-        <header-template-2></header-template-2>
+        <header id="header" class="header">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left">
+                        <div class="search-area" ref="search_area">
+                            <input class="searchfield" type="text" ref="search_value"
+                            @input="search_input" v-model="search" placeholder="Поиск">
+                            <button class="search-icon circle" ref="circle" @click="search_do">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="search-icon cross" ref="cross" @click="search_clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <a href="#contacts" class="header-shops">
+                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <img src="../../img/map_marker.png" class="map-marker">
+                        </a>
+                    </div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="../../Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image" src="../../img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right">
+                        <a href="../../Loccitane_Uz_cart.html" class="header-cart">
+                            <div class="cart">МОЯ КОРЗИНА</div>
+                            <div class="cart-icon">
+                                <div class="in-cart" v-if="cart.length > 0">
+                                    <p>{{ cart.length }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <header-nav-template-2></header-nav-template-2>
+
+            </div>
+            
+        </header>
     
         <div class="m-banner">
             <a href="https://t.me/loccitaneuz_bot" target="_blanc"><span class="m-banner-text">Следите за новинками на телеграм-канале t.me/loccitaneuz_bot</span></a>
@@ -25,8 +68,19 @@
     
     
         <div class="menu-page-main">
+            <div class="search-module" ref="show_me">
+                <div class="module-content">
+                    <a v-for="item in filteredList" class="product-hover" :href="item.url">
+                        <div class="module-content-block">
+                            <img class="block-img" :src="item.img">
+                            <div class="block-name">{{item.name}}</div>
+                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         
-            <div class="page-module">
+            <div class="page-module" ref="hide_me">
                 <h2 class="module-title-2">Для лица</h2>
                 <div class="module-title-2-text">Ежедневно мужская кожа подвержена тем же неблагоприятным агрессивным воздействиям, что и женская - солнце, плохая экология, ветер, мороз, и плюс ко всему травмирование кожи во время бритья. 
                     Поэтому важно защищать, увлажнять, укреплять, восстанавливать кожу, а также бороться с ее возрастными изменениями.</div>

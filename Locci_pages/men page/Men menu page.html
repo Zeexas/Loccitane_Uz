@@ -15,9 +15,52 @@
 </head>
 <body>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-        <header-template-2></header-template-2>
+        <header id="header" class="header">
+            <div class="header-top-border"></div>
+            <div class="header-wrapper">
+                <div class="header-area-wrapper">
+                    <div class="header-area-left">
+                        <div class="search-area" ref="search_area">
+                            <input class="searchfield" type="text" ref="search_value"
+                            @input="search_input" v-model="search" placeholder="Поиск">
+                            <button class="search-icon circle" ref="circle" @click="search_do">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <button class="search-icon cross" ref="cross" @click="search_clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <a href="#contacts" class="header-shops">
+                            <div class="header-shops-text"><span class="header-shops-break">|</span>{{shops}}</div>
+                            <img src="../../img/map_marker.png" class="map-marker">
+                        </a>
+                    </div>
+                    <div class="header-area-middle">
+                        <div class="header-area-middle-inn">
+                            <a href="../../Loccitane_Uz.html" class="logo-link">
+                                <img class="logo-image" src="../../img/logo.svg" title="L'OCCITANE en Provence - Uzbekistan">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-area-right header-left-right">
+                        <a href="../../Loccitane_Uz_cart.html" class="header-cart">
+                            <div class="cart">МОЯ КОРЗИНА</div>
+                            <div class="cart-icon">
+                                <div class="in-cart" v-if="cart.length > 0">
+                                    <p>{{ cart.length }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <header-nav-template-2></header-nav-template-2>
+
+            </div>
+            
+        </header>
     
         <div class="m-banner">
             <a href="https://t.me/loccitaneuz_bot" target="_blanc"><span class="m-banner-text">Следите за новинками на телеграм-канале t.me/loccitaneuz_bot</span></a>
@@ -25,105 +68,71 @@
     
     
         <div class="menu-page-main">
-            <div class="menu-page-poster">
-                <img src="../../img/men/Men menu page.webp">
-                <div class="page-poster-inblock-back">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <li>Для бритья</li>
-                                <li>Уход за лицом мужчин</li>
-                                <li>Для ванны и душа</li>
-                                <li>Уход за волосами</li>
-                                <li>Уход за телом</li>
-                                <li>Парфюмерия</li>
-                            </ul>
+            <div class="search-module" ref="show_me">
+                <div class="module-content">
+                    <a v-for="item in filteredList" class="product-hover" :href="item.url">
+                        <div class="module-content-block">
+                            <img class="block-img" :src="item.img">
+                            <div class="block-name">{{item.name}}</div>
+                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
                         </div>
-                    </div>
-                </div>
-                <div class="page-poster-inblock">
-                    <div class="page-poster-content">
-                        <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
-                        <div class="page-poster-content-small">
-                            <ul class="">
-                                <li>Для бритья</li>
-                                <li>Уход за лицом мужчин</li>
-                                <li>Для ванны и душа</li>
-                                <li>Уход за волосами</li>
-                                <li>Уход за телом</li>
-                                <li>Парфюмерия</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="poster-ribbon">
-                    <div class="ribbon-big">ДЛЯ МУЖЧИН</div>
-                    <div class="ribbon-small">Мы предлагаем превосходные средства ухода для мужчин. 
-                        Каждая серия расскажет свою историю прованских вод. Наши продукты, изготовленные из ингредиентов натурального происхождения, 
-                        включают ароматы, средства для бритья и ухода за кожей, а также для ванн и тела.</div>
+                    </a>
                 </div>
             </div>
-        
-            <div class="page-module">
-                <h2 class="module-title">Рекомендуемые продукты</h2>
-                <div class="module-content">
-                    <a class="product-hover" href="Бальзам после бритья Cade.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Бальзам после бритья Cade.webp">
-                            <div class="block-name">Бальзам после бритья Можжевельник</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+
+            <div ref="hide_me">
+                <div class="menu-page-poster">
+                    <img src="../../img/men/Men menu page.webp">
+                    <div class="page-poster-inblock-back">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <li>Для бритья</li>
+                                    <li>Уход за лицом мужчин</li>
+                                    <li>Для ванны и душа</li>
+                                    <li>Уход за волосами</li>
+                                    <li>Уход за телом</li>
+                                    <li>Парфюмерия</li>
+                                </ul>
+                            </div>
                         </div>
-                    </a>
-                    <a class="product-hover" href="Гель для душа Аква Цедрат.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Гель для душа Аква Цедрат.webp">
-                            <div class="block-name">Гель для душа Аква Цедрат</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                    </div>
+                    <div class="page-poster-inblock">
+                        <div class="page-poster-content">
+                            <div class="page-poster-content-big">ТИП ПРОДУКТА</div>
+                            <div class="page-poster-content-small">
+                                <ul class="">
+                                    <li>Для бритья</li>
+                                    <li>Уход за лицом мужчин</li>
+                                    <li>Для ванны и душа</li>
+                                    <li>Уход за волосами</li>
+                                    <li>Уход за телом</li>
+                                    <li>Парфюмерия</li>
+                                </ul>
+                            </div>
                         </div>
-                    </a>
-                    <a class="product-hover" href="Гель для лица ультраувлажняющий Аква Реотье.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Гель для лица ультраувлажняющий Аква Реотье.webp">
-                            <div class="block-name">Ультраувлажняющий гель для лица Аква Реотье</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Шампунь для волос Цитрус - Вербена.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Шампунь для волос Цитрус - Вербена.webp">
-                            <div class="block-name">Шампунь для волос Цитрус - Вербена</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Энергетический флюид для лица Cade.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Энергетический флюид для лица Cade.webp">
-                            <div class="block-name">Энергетический флюид для лица Можжевельник</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Туалетная вода Cedrat.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Туалетная вода Cedrat.webp">
-                            <div class="block-name">Туалетная вода Cedrat</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Мыло О де Бо.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Мыло О де Бо.webp">
-                            <div class="block-name">Мыло О де Бо</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
-                    <a class="product-hover" href="Крем для лица Драгоценный Иммортель.html">
-                        <div class="module-content-block">
-                            <img class="block-img" src="../../img/men/Крем для лица Драгоценный Иммортель.webp">
-                            <div class="block-name">Крем для лица Драгоценный Иммортель</div>
-                            <div class="know-more-btn">ПОДРОБНЕЕ</div>
-                        </div>
-                    </a>
+                    </div>
+                    <div class="poster-ribbon">
+                        <div class="ribbon-big">ДЛЯ МУЖЧИН</div>
+                        <div class="ribbon-small">Мы предлагаем превосходные средства ухода для мужчин. 
+                            Каждая серия расскажет свою историю прованских вод. Наши продукты, изготовленные из ингредиентов натурального происхождения, 
+                            включают ароматы, средства для бритья и ухода за кожей, а также для ванн и тела.</div>
+                    </div>
+                </div>
+            
+                <div class="page-module">
+                    <h2 class="module-title">Рекомендуемые продукты</h2>
+                    <div class="module-content">
+                        <a class="product-hover" v-for="prod in products"
+                        v-if="(prod.type=='men' || prod.id=='men-31') && prod.recommend=='yes'" :href="prod.url">
+                            <div class="module-content-block">
+                                <img class="block-img" :src="prod.img">
+                                <div class="block-name">{{ prod.name }}</div>
+                                <div class="know-more-btn">ПОДРОБНЕЕ</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
     
